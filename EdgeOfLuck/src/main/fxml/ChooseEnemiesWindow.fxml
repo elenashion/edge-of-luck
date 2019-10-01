@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.MenuController">
+   <children>
+      <AnchorPane prefHeight="308.0" prefWidth="367.0">
+         <children>
+            <Button fx:id="startGameButton1" layoutX="86.0" layoutY="184.0" mnemonicParsing="false" onAction="#startGame" text="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="startGameButton2" layoutX="166.0" layoutY="184.0" mnemonicParsing="false" onAction="#startGame" text="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="startGameButton3" layoutX="249.0" layoutY="184.0" mnemonicParsing="false" onAction="#startGame" text="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Text layoutX="50.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите количество противников" textAlignment="CENTER" wrappingWidth="266.826171875">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

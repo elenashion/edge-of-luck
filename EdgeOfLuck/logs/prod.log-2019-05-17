@@ -1,0 +1,238 @@
+2019-05-17 17:27:10 INFO  LogicManager:34 - User Ммм login
+2019-05-17 17:27:17 INFO  LogicManager:79 - Enemies created. Number of enemies=3
+2019-05-17 17:27:17 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=98, secondNumber=14, roundNumber=0, roundResult=EVEN, activeUser=Ммм
+2019-05-17 17:27:17 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=0, roundResult=EVEN, enemiesSize=3, activeUser=Ммм
+2019-05-17 17:27:21 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=Ммм
+2019-05-17 17:27:21 INFO  LogicManager:134 - setPoints. Rey choose ODD, result=WIN, set 10 points. Round=0, activeUser=Ммм
+2019-05-17 17:27:21 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=LOSE, set -5 points. Round=0, activeUser=Ммм
+2019-05-17 17:27:21 INFO  LogicManager:134 - setPoints. Mayushi choose ODD, result=LOSE, set -5 points. Round=0, activeUser=Ммм
+2019-05-17 17:27:21 INFO  LogicManager:140 - setPoints. User Ммм choose ODD, result=LOSE, set -5 points, round=0
+2019-05-17 17:27:23 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=47, secondNumber=49, roundNumber=1, roundResult=EVEN, activeUser=Ммм
+2019-05-17 17:27:23 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=1, roundResult=EVEN, enemiesSize=3, activeUser=Ммм
+2019-05-17 17:27:24 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=Ммм
+2019-05-17 17:27:24 INFO  LogicManager:134 - setPoints. Rey choose ODD, result=LOSE, set -5 points. Round=1, activeUser=Ммм
+2019-05-17 17:27:24 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=LOSE, set -5 points. Round=1, activeUser=Ммм
+2019-05-17 17:27:24 INFO  LogicManager:134 - setPoints. Mayushi choose ODD, result=WIN, set 10 points. Round=1, activeUser=Ммм
+2019-05-17 17:27:24 INFO  LogicManager:140 - setPoints. User Ммм choose ODD, result=LOSE, set -5 points, round=1
+2019-05-17 17:27:26 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=41, secondNumber=99, roundNumber=2, roundResult=EVEN, activeUser=Ммм
+2019-05-17 17:27:26 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=2, roundResult=EVEN, enemiesSize=3, activeUser=Ммм
+2019-05-17 17:27:27 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=Ммм
+2019-05-17 17:27:27 INFO  LogicManager:134 - setPoints. Rey choose ODD, result=LOSE, set -5 points. Round=2, activeUser=Ммм
+2019-05-17 17:27:27 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=LOSE, set -5 points. Round=2, activeUser=Ммм
+2019-05-17 17:27:27 INFO  LogicManager:134 - setPoints. Mayushi choose ODD, result=WIN, set 10 points. Round=2, activeUser=Ммм
+2019-05-17 17:27:27 INFO  LogicManager:140 - setPoints. User Ммм choose ODD, result=LOSE, set -5 points, round=2
+2019-05-17 17:27:29 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=41, secondNumber=22, roundNumber=3, roundResult=ODD, activeUser=Ммм
+2019-05-17 17:27:29 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=3, roundResult=ODD, enemiesSize=3, activeUser=Ммм
+2019-05-17 17:27:30 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Ммм
+2019-05-17 17:27:30 INFO  LogicManager:134 - setPoints. Rey choose ODD, result=WIN, set 7 points. Round=3, activeUser=Ммм
+2019-05-17 17:27:30 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=3, activeUser=Ммм
+2019-05-17 17:27:30 INFO  LogicManager:134 - setPoints. Mayushi choose EVEN, result=WIN, set 7 points. Round=3, activeUser=Ммм
+2019-05-17 17:27:30 INFO  LogicManager:140 - setPoints. User Ммм choose ODD, result=WIN, set 7 points, round=3
+2019-05-17 17:27:32 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=31, secondNumber=27, roundNumber=4, roundResult=EVEN, activeUser=Ммм
+2019-05-17 17:27:32 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=4, roundResult=EVEN, enemiesSize=3, activeUser=Ммм
+2019-05-17 17:27:33 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=Ммм
+2019-05-17 17:27:33 INFO  LogicManager:134 - setPoints. Rey choose ODD, result=LOSE, set -5 points. Round=4, activeUser=Ммм
+2019-05-17 17:27:33 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=LOSE, set -5 points. Round=4, activeUser=Ммм
+2019-05-17 17:27:33 INFO  LogicManager:134 - setPoints. Mayushi choose EVEN, result=LOSE, set -5 points. Round=4, activeUser=Ммм
+2019-05-17 17:27:33 INFO  LogicManager:140 - setPoints. User Ммм choose ODD, result=LOSE, set -3 points, round=4
+2019-05-17 17:27:35 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=88, secondNumber=41, roundNumber=5, roundResult=ODD, activeUser=Ммм
+2019-05-17 17:27:35 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=5, roundResult=ODD, enemiesSize=3, activeUser=Ммм
+2019-05-17 17:27:36 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Ммм
+2019-05-17 17:27:36 INFO  LogicManager:134 - setPoints. Rey choose ODD, result=LOSE, set -7 points. Round=5, activeUser=Ммм
+2019-05-17 17:27:36 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=5, activeUser=Ммм
+2019-05-17 17:27:36 INFO  LogicManager:134 - setPoints. Mayushi choose EVEN, result=WIN, set 7 points. Round=5, activeUser=Ммм
+2019-05-17 17:27:36 INFO  LogicManager:140 - setPoints. User Ммм choose ODD, result=WIN, set 7 points, round=5
+2019-05-17 17:27:38 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=41, secondNumber=86, roundNumber=6, roundResult=ODD, activeUser=Ммм
+2019-05-17 17:27:38 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=6, roundResult=ODD, enemiesSize=3, activeUser=Ммм
+2019-05-17 17:27:38 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Ммм
+2019-05-17 17:27:38 INFO  LogicManager:134 - setPoints. Rey choose ODD, result=WIN, set 7 points. Round=6, activeUser=Ммм
+2019-05-17 17:27:38 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=6, activeUser=Ммм
+2019-05-17 17:27:38 INFO  LogicManager:134 - setPoints. Mayushi choose EVEN, result=WIN, set 7 points. Round=6, activeUser=Ммм
+2019-05-17 17:27:38 INFO  LogicManager:140 - setPoints. User Ммм choose ODD, result=WIN, set 7 points, round=6
+2019-05-17 17:27:40 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=0, secondNumber=7, roundNumber=7, roundResult=ODD, activeUser=Ммм
+2019-05-17 17:27:40 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=7, roundResult=ODD, enemiesSize=3, activeUser=Ммм
+2019-05-17 17:27:41 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Ммм
+2019-05-17 17:27:41 INFO  LogicManager:134 - setPoints. Rey choose ODD, result=WIN, set 7 points. Round=7, activeUser=Ммм
+2019-05-17 17:27:41 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=7, activeUser=Ммм
+2019-05-17 17:27:41 INFO  LogicManager:134 - setPoints. Mayushi choose ODD, result=LOSE, set -7 points. Round=7, activeUser=Ммм
+2019-05-17 17:27:41 INFO  LogicManager:140 - setPoints. User Ммм choose ODD, result=WIN, set 7 points, round=7
+2019-05-17 17:27:43 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=11, secondNumber=2, roundNumber=8, roundResult=ODD, activeUser=Ммм
+2019-05-17 17:27:43 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=8, roundResult=ODD, enemiesSize=3, activeUser=Ммм
+2019-05-17 17:27:46 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Ммм
+2019-05-17 17:27:46 INFO  LogicManager:134 - setPoints. Rey choose EVEN, result=LOSE, set -7 points. Round=8, activeUser=Ммм
+2019-05-17 17:27:46 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=8, activeUser=Ммм
+2019-05-17 17:27:46 INFO  LogicManager:134 - setPoints. Mayushi choose EVEN, result=WIN, set 7 points. Round=8, activeUser=Ммм
+2019-05-17 17:27:46 INFO  LogicManager:140 - setPoints. User Ммм choose ODD, result=WIN, set 7 points, round=8
+2019-05-17 17:27:48 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=62, secondNumber=39, roundNumber=9, roundResult=ODD, activeUser=Ммм
+2019-05-17 17:27:48 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=9, roundResult=ODD, enemiesSize=3, activeUser=Ммм
+2019-05-17 17:27:49 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Ммм
+2019-05-17 17:27:49 INFO  LogicManager:134 - setPoints. Rey choose ODD, result=WIN, set 7 points. Round=9, activeUser=Ммм
+2019-05-17 17:27:49 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=9, activeUser=Ммм
+2019-05-17 17:27:49 INFO  LogicManager:134 - setPoints. Mayushi choose EVEN, result=WIN, set 7 points. Round=9, activeUser=Ммм
+2019-05-17 17:27:49 INFO  LogicManager:140 - setPoints. User Ммм choose ODD, result=WIN, set 7 points, round=9
+2019-05-17 17:27:51 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=82, secondNumber=35, roundNumber=10, roundResult=ODD, activeUser=Ммм
+2019-05-17 17:27:51 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=10, roundResult=ODD, enemiesSize=3, activeUser=Ммм
+2019-05-17 17:27:54 INFO  LogicManager:34 - Exit from program
+2019-05-17 17:32:06 INFO  FileAppender:34 - User  login
+2019-05-17 17:36:51 INFO  someName:34 - User  login
+2019-05-17 17:36:53 INFO  someName:79 - Enemies created. Number of enemies=3
+2019-05-17 17:36:53 INFO  someName:95 - setNumbers. Result created. FirstNumber=48, secondNumber=31, roundNumber=0, roundResult=ODD, activeUser=
+2019-05-17 17:36:53 INFO  someName:101 - setNumbers. Enemies make a decision. RoundNumber=0, roundResult=ODD, enemiesSize=3, activeUser=
+2019-05-17 17:36:54 INFO  someName:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=
+2019-05-17 17:36:54 INFO  someName:134 - setPoints. Haruhi choose ODD, result=LOSE, set -7 points. Round=0, activeUser=
+2019-05-17 17:36:54 INFO  someName:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=0, activeUser=
+2019-05-17 17:36:54 INFO  someName:134 - setPoints. Konata choose ODD, result=WIN, set 7 points. Round=0, activeUser=
+2019-05-17 17:36:54 INFO  someName:140 - setPoints. User  choose ODD, result=WIN, set 7 points, round=0
+2019-05-17 17:36:56 INFO  someName:95 - setNumbers. Result created. FirstNumber=36, secondNumber=99, roundNumber=1, roundResult=ODD, activeUser=
+2019-05-17 17:36:56 INFO  someName:101 - setNumbers. Enemies make a decision. RoundNumber=1, roundResult=ODD, enemiesSize=3, activeUser=
+2019-05-17 17:36:57 INFO  someName:34 - Exit from program
+2019-05-17 17:38:57 INFO  LogicManager:34 - User  login
+2019-05-17 17:39:00 INFO  LogicManager:79 - Enemies created. Number of enemies=3
+2019-05-17 17:39:00 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=17, secondNumber=52, roundNumber=0, roundResult=ODD, activeUser=
+2019-05-17 17:39:00 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=0, roundResult=ODD, enemiesSize=3, activeUser=
+2019-05-17 17:39:01 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=
+2019-05-17 17:39:01 INFO  LogicManager:134 - setPoints. Aqua choose ODD, result=LOSE, set -7 points. Round=0, activeUser=
+2019-05-17 17:39:01 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=0, activeUser=
+2019-05-17 17:39:01 INFO  LogicManager:134 - setPoints. Miku choose ODD, result=WIN, set 7 points. Round=0, activeUser=
+2019-05-17 17:39:01 INFO  LogicManager:140 - setPoints. User  choose ODD, result=WIN, set 7 points, round=0
+2019-05-17 17:39:03 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=19, secondNumber=64, roundNumber=1, roundResult=ODD, activeUser=
+2019-05-17 17:39:03 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=1, roundResult=ODD, enemiesSize=3, activeUser=
+2019-05-17 17:39:03 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=
+2019-05-17 17:39:03 INFO  LogicManager:134 - setPoints. Aqua choose ODD, result=WIN, set 7 points. Round=1, activeUser=
+2019-05-17 17:39:03 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=1, activeUser=
+2019-05-17 17:39:03 INFO  LogicManager:134 - setPoints. Miku choose ODD, result=LOSE, set -7 points. Round=1, activeUser=
+2019-05-17 17:39:03 INFO  LogicManager:140 - setPoints. User  choose ODD, result=WIN, set 7 points, round=1
+2019-05-17 17:39:05 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=73, secondNumber=62, roundNumber=2, roundResult=ODD, activeUser=
+2019-05-17 17:39:05 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=2, roundResult=ODD, enemiesSize=3, activeUser=
+2019-05-17 17:39:07 INFO  LogicManager:34 - Exit from program
+2019-05-17 17:39:48 INFO  LogicManager:34 - User hhhhh login
+2019-05-17 17:39:52 INFO  LogicManager:79 - Enemies created. Number of enemies=3
+2019-05-17 17:39:52 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=30, secondNumber=68, roundNumber=0, roundResult=EVEN, activeUser=hhhhh
+2019-05-17 17:39:52 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=0, roundResult=EVEN, enemiesSize=3, activeUser=hhhhh
+2019-05-17 17:39:53 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=hhhhh
+2019-05-17 17:39:53 INFO  LogicManager:134 - setPoints. Mayushi choose ODD, result=WIN, set 10 points. Round=0, activeUser=hhhhh
+2019-05-17 17:39:53 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=LOSE, set -5 points. Round=0, activeUser=hhhhh
+2019-05-17 17:39:53 INFO  LogicManager:134 - setPoints. Horo choose ODD, result=LOSE, set -5 points. Round=0, activeUser=hhhhh
+2019-05-17 17:39:53 INFO  LogicManager:140 - setPoints. User hhhhh choose ODD, result=LOSE, set -5 points, round=0
+2019-05-17 17:39:55 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=87, secondNumber=66, roundNumber=1, roundResult=ODD, activeUser=hhhhh
+2019-05-17 17:39:55 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=1, roundResult=ODD, enemiesSize=3, activeUser=hhhhh
+2019-05-17 17:39:56 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=hhhhh
+2019-05-17 17:39:56 INFO  LogicManager:134 - setPoints. Mayushi choose ODD, result=WIN, set 7 points. Round=1, activeUser=hhhhh
+2019-05-17 17:39:56 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=1, activeUser=hhhhh
+2019-05-17 17:39:56 INFO  LogicManager:134 - setPoints. Horo choose ODD, result=LOSE, set -7 points. Round=1, activeUser=hhhhh
+2019-05-17 17:39:56 INFO  LogicManager:140 - setPoints. User hhhhh choose ODD, result=WIN, set 7 points, round=1
+2019-05-17 17:39:58 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=86, secondNumber=35, roundNumber=2, roundResult=ODD, activeUser=hhhhh
+2019-05-17 17:39:58 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=2, roundResult=ODD, enemiesSize=3, activeUser=hhhhh
+2019-05-17 17:39:59 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=hhhhh
+2019-05-17 17:39:59 INFO  LogicManager:134 - setPoints. Mayushi choose EVEN, result=LOSE, set -7 points. Round=2, activeUser=hhhhh
+2019-05-17 17:39:59 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=2, activeUser=hhhhh
+2019-05-17 17:39:59 INFO  LogicManager:134 - setPoints. Horo choose ODD, result=LOSE, set -7 points. Round=2, activeUser=hhhhh
+2019-05-17 17:39:59 INFO  LogicManager:140 - setPoints. User hhhhh choose ODD, result=WIN, set 7 points, round=2
+2019-05-17 17:40:01 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=44, secondNumber=30, roundNumber=3, roundResult=EVEN, activeUser=hhhhh
+2019-05-17 17:40:01 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=3, roundResult=EVEN, enemiesSize=3, activeUser=hhhhh
+2019-05-17 17:40:02 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=hhhhh
+2019-05-17 17:40:02 INFO  LogicManager:134 - setPoints. Mayushi choose ODD, result=LOSE, set -5 points. Round=3, activeUser=hhhhh
+2019-05-17 17:40:02 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=LOSE, set -5 points. Round=3, activeUser=hhhhh
+2019-05-17 17:40:02 INFO  LogicManager:134 - setPoints. Horo choose ODD, result=WIN, set 10 points. Round=3, activeUser=hhhhh
+2019-05-17 17:40:02 INFO  LogicManager:140 - setPoints. User hhhhh choose ODD, result=LOSE, set -5 points, round=3
+2019-05-17 17:40:04 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=45, secondNumber=78, roundNumber=4, roundResult=ODD, activeUser=hhhhh
+2019-05-17 17:40:04 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=4, roundResult=ODD, enemiesSize=3, activeUser=hhhhh
+2019-05-17 17:40:05 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=hhhhh
+2019-05-17 17:40:05 INFO  LogicManager:134 - setPoints. Mayushi choose EVEN, result=LOSE, set -7 points. Round=4, activeUser=hhhhh
+2019-05-17 17:40:05 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=4, activeUser=hhhhh
+2019-05-17 17:40:05 INFO  LogicManager:134 - setPoints. Horo choose ODD, result=LOSE, set -7 points. Round=4, activeUser=hhhhh
+2019-05-17 17:40:05 INFO  LogicManager:140 - setPoints. User hhhhh choose ODD, result=WIN, set 7 points, round=4
+2019-05-17 17:40:07 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=21, secondNumber=20, roundNumber=5, roundResult=ODD, activeUser=hhhhh
+2019-05-17 17:40:07 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=5, roundResult=ODD, enemiesSize=3, activeUser=hhhhh
+2019-05-17 17:40:08 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=hhhhh
+2019-05-17 17:40:08 INFO  LogicManager:134 - setPoints. Mayushi choose ODD, result=LOSE, set -7 points. Round=5, activeUser=hhhhh
+2019-05-17 17:40:08 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=5, activeUser=hhhhh
+2019-05-17 17:40:08 INFO  LogicManager:134 - setPoints. Horo choose ODD, result=LOSE, set -7 points. Round=5, activeUser=hhhhh
+2019-05-17 17:40:08 INFO  LogicManager:140 - setPoints. User hhhhh choose ODD, result=WIN, set 7 points, round=5
+2019-05-17 17:40:10 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=9, secondNumber=64, roundNumber=6, roundResult=ODD, activeUser=hhhhh
+2019-05-17 17:40:10 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=6, roundResult=ODD, enemiesSize=3, activeUser=hhhhh
+2019-05-17 17:40:13 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=hhhhh
+2019-05-17 17:40:13 INFO  LogicManager:134 - setPoints. Mayushi choose EVEN, result=LOSE, set -7 points. Round=6, activeUser=hhhhh
+2019-05-17 17:40:13 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=6, activeUser=hhhhh
+2019-05-17 17:40:13 INFO  LogicManager:134 - setPoints. Horo choose ODD, result=LOSE, set -7 points. Round=6, activeUser=hhhhh
+2019-05-17 17:40:13 INFO  LogicManager:140 - setPoints. User hhhhh choose ODD, result=WIN, set 7 points, round=6
+2019-05-17 17:40:15 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=65, secondNumber=60, roundNumber=7, roundResult=ODD, activeUser=hhhhh
+2019-05-17 17:40:15 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=7, roundResult=ODD, enemiesSize=3, activeUser=hhhhh
+2019-05-17 17:40:16 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=hhhhh
+2019-05-17 17:40:16 INFO  LogicManager:134 - setPoints. Mayushi choose ODD, result=WIN, set 7 points. Round=7, activeUser=hhhhh
+2019-05-17 17:40:16 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=7, activeUser=hhhhh
+2019-05-17 17:40:16 INFO  LogicManager:134 - setPoints. Horo choose ODD, result=LOSE, set -7 points. Round=7, activeUser=hhhhh
+2019-05-17 17:40:16 INFO  LogicManager:140 - setPoints. User hhhhh choose ODD, result=WIN, set 7 points, round=7
+2019-05-17 17:40:18 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=70, secondNumber=37, roundNumber=8, roundResult=ODD, activeUser=hhhhh
+2019-05-17 17:40:18 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=8, roundResult=ODD, enemiesSize=3, activeUser=hhhhh
+2019-05-17 17:40:20 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=hhhhh
+2019-05-17 17:40:20 INFO  LogicManager:134 - setPoints. Mayushi choose ODD, result=WIN, set 7 points. Round=8, activeUser=hhhhh
+2019-05-17 17:40:20 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=8, activeUser=hhhhh
+2019-05-17 17:40:20 INFO  LogicManager:134 - setPoints. Horo choose ODD, result=LOSE, set -7 points. Round=8, activeUser=hhhhh
+2019-05-17 17:40:20 INFO  LogicManager:140 - setPoints. User hhhhh choose ODD, result=WIN, set 7 points, round=8
+2019-05-17 17:40:22 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=51, secondNumber=29, roundNumber=9, roundResult=EVEN, activeUser=hhhhh
+2019-05-17 17:40:22 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=9, roundResult=EVEN, enemiesSize=3, activeUser=hhhhh
+2019-05-17 17:40:25 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=hhhhh
+2019-05-17 17:40:25 INFO  LogicManager:134 - setPoints. Mayushi choose EVEN, result=WIN, set 10 points. Round=9, activeUser=hhhhh
+2019-05-17 17:40:25 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=LOSE, set -5 points. Round=9, activeUser=hhhhh
+2019-05-17 17:40:25 INFO  LogicManager:134 - setPoints. Horo choose ODD, result=WIN, set 10 points. Round=9, activeUser=hhhhh
+2019-05-17 17:40:25 INFO  LogicManager:140 - setPoints. User hhhhh choose ODD, result=LOSE, set -5 points, round=9
+2019-05-17 17:40:27 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=58, secondNumber=19, roundNumber=10, roundResult=ODD, activeUser=hhhhh
+2019-05-17 17:40:27 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=10, roundResult=ODD, enemiesSize=3, activeUser=hhhhh
+2019-05-17 17:40:28 INFO  LogicManager:108 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=hhhhh
+2019-05-17 17:40:28 INFO  LogicManager:134 - setPoints. Mayushi choose EVEN, result=WIN, set 7 points. Round=10, activeUser=hhhhh
+2019-05-17 17:40:28 INFO  LogicManager:134 - setPoints. Yoko choose ODD, result=WIN, set 7 points. Round=10, activeUser=hhhhh
+2019-05-17 17:40:28 INFO  LogicManager:134 - setPoints. Horo choose ODD, result=WIN, set 7 points. Round=10, activeUser=hhhhh
+2019-05-17 17:40:28 INFO  LogicManager:140 - setPoints. User hhhhh choose ODD, result=WIN, set 7 points, round=10
+2019-05-17 17:40:30 INFO  LogicManager:95 - setNumbers. Result created. FirstNumber=50, secondNumber=44, roundNumber=11, roundResult=EVEN, activeUser=hhhhh
+2019-05-17 17:40:30 INFO  LogicManager:101 - setNumbers. Enemies make a decision. RoundNumber=11, roundResult=EVEN, enemiesSize=3, activeUser=hhhhh
+2019-05-17 17:40:33 INFO  LogicManager:34 - Exit from program
+2019-05-17 19:18:28 INFO  LogicManager:33 - User р login
+2019-05-17 19:18:31 INFO  LogicManager:77 - Enemies created. Number of enemies=3
+2019-05-17 19:18:31 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=13, secondNumber=53, roundNumber=0, roundResult=EVEN, activeUser=р
+2019-05-17 19:18:31 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=0, roundResult=EVEN, enemiesSize=3, activeUser=р
+2019-05-17 19:18:32 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=р
+2019-05-17 19:18:32 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=WIN, set 10 points. Round=0, activeUser=р
+2019-05-17 19:18:32 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=LOSE, set -5 points. Round=0, activeUser=р
+2019-05-17 19:18:32 INFO  LogicManager:132 - setPoints. Kurisu choose ODD, result=LOSE, set -5 points. Round=0, activeUser=р
+2019-05-17 19:18:32 INFO  LogicManager:138 - setPoints. User р choose ODD, result=LOSE, set -5 points, round=0
+2019-05-17 19:18:34 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=94, secondNumber=8, roundNumber=1, roundResult=EVEN, activeUser=р
+2019-05-17 19:18:34 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=1, roundResult=EVEN, enemiesSize=3, activeUser=р
+2019-05-17 19:18:36 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=р
+2019-05-17 19:18:36 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=LOSE, set -7 points. Round=1, activeUser=р
+2019-05-17 19:18:36 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=LOSE, set -7 points. Round=1, activeUser=р
+2019-05-17 19:18:36 INFO  LogicManager:132 - setPoints. Kurisu choose ODD, result=WIN, set 7 points. Round=1, activeUser=р
+2019-05-17 19:18:36 INFO  LogicManager:138 - setPoints. User р choose EVEN, result=WIN, set 7 points, round=1
+2019-05-17 19:18:38 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=4, secondNumber=68, roundNumber=2, roundResult=EVEN, activeUser=р
+2019-05-17 19:18:38 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=2, roundResult=EVEN, enemiesSize=3, activeUser=р
+2019-05-17 19:18:40 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=р
+2019-05-17 19:18:40 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=LOSE, set -5 points. Round=2, activeUser=р
+2019-05-17 19:18:40 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=LOSE, set -5 points. Round=2, activeUser=р
+2019-05-17 19:18:40 INFO  LogicManager:132 - setPoints. Kurisu choose ODD, result=WIN, set 10 points. Round=2, activeUser=р
+2019-05-17 19:18:40 INFO  LogicManager:138 - setPoints. User р choose ODD, result=LOSE, set -5 points, round=2
+2019-05-17 19:18:42 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=87, secondNumber=54, roundNumber=3, roundResult=ODD, activeUser=р
+2019-05-17 19:18:42 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=3, roundResult=ODD, enemiesSize=3, activeUser=р
+2019-05-17 19:18:43 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=р
+2019-05-17 19:18:43 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=WIN, set 7 points. Round=3, activeUser=р
+2019-05-17 19:18:43 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=WIN, set 7 points. Round=3, activeUser=р
+2019-05-17 19:18:43 INFO  LogicManager:132 - setPoints. Kurisu choose EVEN, result=WIN, set 7 points. Round=3, activeUser=р
+2019-05-17 19:18:43 INFO  LogicManager:138 - setPoints. User р choose ODD, result=WIN, set 7 points, round=3
+2019-05-17 19:18:45 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=65, secondNumber=62, roundNumber=4, roundResult=ODD, activeUser=р
+2019-05-17 19:18:45 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=4, roundResult=ODD, enemiesSize=3, activeUser=р
+2019-05-17 19:18:46 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=р
+2019-05-17 19:18:46 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=WIN, set 7 points. Round=4, activeUser=р
+2019-05-17 19:18:46 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=WIN, set 7 points. Round=4, activeUser=р
+2019-05-17 19:18:46 INFO  LogicManager:132 - setPoints. Kurisu choose EVEN, result=WIN, set 7 points. Round=4, activeUser=р
+2019-05-17 19:18:46 INFO  LogicManager:138 - setPoints. User р choose ODD, result=WIN, set 7 points, round=4
+2019-05-17 19:18:48 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=91, secondNumber=77, roundNumber=5, roundResult=EVEN, activeUser=р
+2019-05-17 19:18:48 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=5, roundResult=EVEN, enemiesSize=3, activeUser=р
+2019-05-17 19:18:51 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=р
+2019-05-17 19:18:51 INFO  LogicManager:132 - setPoints. Konata choose EVEN, result=LOSE, set -5 points. Round=5, activeUser=р
+2019-05-17 19:18:51 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=LOSE, set -5 points. Round=5, activeUser=р
+2019-05-17 19:18:51 INFO  LogicManager:132 - setPoints. Kurisu choose ODD, result=WIN, set 10 points. Round=5, activeUser=р
+2019-05-17 19:18:51 INFO  LogicManager:138 - setPoints. User р choose ODD, result=LOSE, set -5 points, round=5
+2019-05-17 19:18:53 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=88, secondNumber=85, roundNumber=6, roundResult=ODD, activeUser=р
+2019-05-17 19:18:53 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=6, roundResult=ODD, enemiesSize=3, activeUser=р
+2019-05-17 19:18:54 INFO  LogicManager:34 - Exit from program
+2019-05-17 21:28:08 INFO  LogicManager:33 - User gfd login
+2019-05-17 21:28:10 INFO  LogicManager:34 - Exit from program

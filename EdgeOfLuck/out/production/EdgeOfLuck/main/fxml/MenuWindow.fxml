@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.MenuController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="308.0" prefWidth="367.0">
+         <children>
+            <Button layoutX="99.0" layoutY="30.0" mnemonicParsing="false" onAction="#chooseEnemies" prefHeight="25.0" prefWidth="169.0" text="Начать игру" />
+            <Button layoutX="99.0" layoutY="80.0" mnemonicParsing="false" onAction="#getRules" prefHeight="25.0" prefWidth="169.0" text="Правила игры" />
+            <Button layoutX="99.0" layoutY="130.0" mnemonicParsing="false" onAction="#getRecords" prefHeight="25.0" prefWidth="169.0" text="Рекорды" />
+            <Button fx:id="logoutButton" layoutX="99.0" layoutY="180.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="169.0" text="Сменить игрока" />
+            <Button layoutX="99.0" layoutY="230.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="169.0" text="Выход" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

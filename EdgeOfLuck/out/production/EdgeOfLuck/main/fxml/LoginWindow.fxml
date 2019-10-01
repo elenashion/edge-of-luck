@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.LoginController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="230.0" prefWidth="323.0">
+         <children>
+            <Button layoutX="137.0" layoutY="169.0" mnemonicParsing="false" onAction="#login" text="Войти" />
+            <TextField fx:id="loginText" layoutX="87.0" layoutY="115.0" />
+            <Text layoutX="69.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пожалуйста, войдите или создайте новый аккаунт. Имя должно быть не менее трех символов" textAlignment="CENTER" wrappingWidth="184.31640625" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

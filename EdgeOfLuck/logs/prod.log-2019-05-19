@@ -1,0 +1,115 @@
+2019-05-19 14:33:34 INFO  LogicManager:33 - User Валет login
+2019-05-19 14:33:41 INFO  LogicManager:77 - Enemies created. Number of enemies=2
+2019-05-19 14:33:41 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=33, secondNumber=87, roundNumber=0, roundResult=EVEN, activeUser=Валет
+2019-05-19 14:33:41 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=0, roundResult=EVEN, enemiesSize=2, activeUser=Валет
+2019-05-19 14:33:48 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=Валет
+2019-05-19 14:33:48 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=WIN, set 10 points. Round=0, activeUser=Валет
+2019-05-19 14:33:48 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=LOSE, set -5 points. Round=0, activeUser=Валет
+2019-05-19 14:33:48 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=LOSE, set -5 points, round=0
+2019-05-19 14:33:50 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=53, secondNumber=27, roundNumber=1, roundResult=EVEN, activeUser=Валет
+2019-05-19 14:33:50 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=1, roundResult=EVEN, enemiesSize=2, activeUser=Валет
+2019-05-19 14:33:52 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=Валет
+2019-05-19 14:33:52 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=LOSE, set -5 points. Round=1, activeUser=Валет
+2019-05-19 14:33:52 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=LOSE, set -5 points. Round=1, activeUser=Валет
+2019-05-19 14:33:52 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=LOSE, set -3 points, round=1
+2019-05-19 14:33:54 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=75, secondNumber=40, roundNumber=2, roundResult=ODD, activeUser=Валет
+2019-05-19 14:33:54 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=2, roundResult=ODD, enemiesSize=2, activeUser=Валет
+2019-05-19 14:33:56 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Валет
+2019-05-19 14:33:56 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=WIN, set 7 points. Round=2, activeUser=Валет
+2019-05-19 14:33:56 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=WIN, set 7 points. Round=2, activeUser=Валет
+2019-05-19 14:33:56 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=WIN, set 7 points, round=2
+2019-05-19 14:33:58 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=65, secondNumber=40, roundNumber=3, roundResult=ODD, activeUser=Валет
+2019-05-19 14:33:58 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=3, roundResult=ODD, enemiesSize=2, activeUser=Валет
+2019-05-19 14:34:01 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Валет
+2019-05-19 14:34:01 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=WIN, set 7 points. Round=3, activeUser=Валет
+2019-05-19 14:34:01 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=WIN, set 7 points. Round=3, activeUser=Валет
+2019-05-19 14:34:01 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=WIN, set 7 points, round=3
+2019-05-19 14:34:03 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=9, secondNumber=92, roundNumber=4, roundResult=ODD, activeUser=Валет
+2019-05-19 14:34:03 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=4, roundResult=ODD, enemiesSize=2, activeUser=Валет
+2019-05-19 14:34:04 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Валет
+2019-05-19 14:34:04 INFO  LogicManager:132 - setPoints. Miku choose EVEN, result=LOSE, set -7 points. Round=4, activeUser=Валет
+2019-05-19 14:34:04 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=WIN, set 7 points. Round=4, activeUser=Валет
+2019-05-19 14:34:04 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=WIN, set 7 points, round=4
+2019-05-19 14:34:06 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=57, secondNumber=19, roundNumber=5, roundResult=EVEN, activeUser=Валет
+2019-05-19 14:34:06 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=5, roundResult=EVEN, enemiesSize=2, activeUser=Валет
+2019-05-19 14:34:06 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=Валет
+2019-05-19 14:34:06 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=WIN, set 10 points. Round=5, activeUser=Валет
+2019-05-19 14:34:06 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=LOSE, set -5 points. Round=5, activeUser=Валет
+2019-05-19 14:34:06 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=LOSE, set -5 points, round=5
+2019-05-19 14:34:08 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=71, secondNumber=7, roundNumber=6, roundResult=EVEN, activeUser=Валет
+2019-05-19 14:34:08 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=6, roundResult=EVEN, enemiesSize=2, activeUser=Валет
+2019-05-19 14:34:09 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=Валет
+2019-05-19 14:34:09 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=LOSE, set -5 points. Round=6, activeUser=Валет
+2019-05-19 14:34:09 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=LOSE, set -5 points. Round=6, activeUser=Валет
+2019-05-19 14:34:09 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=LOSE, set -3 points, round=6
+2019-05-19 14:34:11 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=47, secondNumber=32, roundNumber=7, roundResult=ODD, activeUser=Валет
+2019-05-19 14:34:11 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=7, roundResult=ODD, enemiesSize=2, activeUser=Валет
+2019-05-19 14:34:12 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Валет
+2019-05-19 14:34:12 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=WIN, set 7 points. Round=7, activeUser=Валет
+2019-05-19 14:34:12 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=WIN, set 7 points. Round=7, activeUser=Валет
+2019-05-19 14:34:12 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=WIN, set 7 points, round=7
+2019-05-19 14:34:14 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=22, secondNumber=79, roundNumber=8, roundResult=ODD, activeUser=Валет
+2019-05-19 14:34:14 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=8, roundResult=ODD, enemiesSize=2, activeUser=Валет
+2019-05-19 14:34:15 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Валет
+2019-05-19 14:34:15 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=WIN, set 7 points. Round=8, activeUser=Валет
+2019-05-19 14:34:15 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=WIN, set 7 points. Round=8, activeUser=Валет
+2019-05-19 14:34:15 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=WIN, set 7 points, round=8
+2019-05-19 14:34:17 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=59, secondNumber=89, roundNumber=9, roundResult=EVEN, activeUser=Валет
+2019-05-19 14:34:17 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=9, roundResult=EVEN, enemiesSize=2, activeUser=Валет
+2019-05-19 14:34:17 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Валет
+2019-05-19 14:34:17 INFO  LogicManager:132 - setPoints. Miku choose EVEN, result=WIN, set 7 points. Round=9, activeUser=Валет
+2019-05-19 14:34:17 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=LOSE, set -7 points. Round=9, activeUser=Валет
+2019-05-19 14:34:17 INFO  LogicManager:138 - setPoints. User Валет choose EVEN, result=WIN, set 7 points, round=9
+2019-05-19 14:34:19 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=74, secondNumber=91, roundNumber=10, roundResult=ODD, activeUser=Валет
+2019-05-19 14:34:19 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=10, roundResult=ODD, enemiesSize=2, activeUser=Валет
+2019-05-19 14:34:20 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Валет
+2019-05-19 14:34:20 INFO  LogicManager:132 - setPoints. Miku choose EVEN, result=WIN, set 7 points. Round=10, activeUser=Валет
+2019-05-19 14:34:20 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=WIN, set 7 points. Round=10, activeUser=Валет
+2019-05-19 14:34:20 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=WIN, set 7 points, round=10
+2019-05-19 14:34:22 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=74, secondNumber=95, roundNumber=11, roundResult=ODD, activeUser=Валет
+2019-05-19 14:34:22 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=11, roundResult=ODD, enemiesSize=2, activeUser=Валет
+2019-05-19 14:34:22 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=Валет
+2019-05-19 14:34:22 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=WIN, set 10 points. Round=11, activeUser=Валет
+2019-05-19 14:34:22 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=WIN, set 10 points. Round=11, activeUser=Валет
+2019-05-19 14:34:22 INFO  LogicManager:138 - setPoints. User Валет choose EVEN, result=LOSE, set -5 points, round=11
+2019-05-19 14:34:24 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=55, secondNumber=21, roundNumber=12, roundResult=EVEN, activeUser=Валет
+2019-05-19 14:34:24 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=12, roundResult=EVEN, enemiesSize=2, activeUser=Валет
+2019-05-19 14:34:25 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=Валет
+2019-05-19 14:34:25 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=LOSE, set -5 points. Round=12, activeUser=Валет
+2019-05-19 14:34:25 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=LOSE, set -5 points. Round=12, activeUser=Валет
+2019-05-19 14:34:25 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=LOSE, set -3 points, round=12
+2019-05-19 14:34:27 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=67, secondNumber=60, roundNumber=13, roundResult=ODD, activeUser=Валет
+2019-05-19 14:34:27 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=13, roundResult=ODD, enemiesSize=2, activeUser=Валет
+2019-05-19 14:34:28 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Валет
+2019-05-19 14:34:28 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=WIN, set 7 points. Round=13, activeUser=Валет
+2019-05-19 14:34:28 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=WIN, set 7 points. Round=13, activeUser=Валет
+2019-05-19 14:34:28 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=WIN, set 7 points, round=13
+2019-05-19 14:34:30 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=68, secondNumber=32, roundNumber=14, roundResult=EVEN, activeUser=Валет
+2019-05-19 14:34:30 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=14, roundResult=EVEN, enemiesSize=2, activeUser=Валет
+2019-05-19 14:34:31 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=Валет
+2019-05-19 14:34:31 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=LOSE, set -5 points. Round=14, activeUser=Валет
+2019-05-19 14:34:31 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=LOSE, set -5 points. Round=14, activeUser=Валет
+2019-05-19 14:34:31 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=LOSE, set -3 points, round=14
+2019-05-19 14:34:33 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=69, secondNumber=37, roundNumber=15, roundResult=EVEN, activeUser=Валет
+2019-05-19 14:34:33 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=15, roundResult=EVEN, enemiesSize=2, activeUser=Валет
+2019-05-19 14:34:34 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=LOSE, activeUser=Валет
+2019-05-19 14:34:34 INFO  LogicManager:132 - setPoints. Miku choose ODD, result=WIN, set 10 points. Round=15, activeUser=Валет
+2019-05-19 14:34:34 INFO  LogicManager:132 - setPoints. Konata choose ODD, result=LOSE, set -5 points. Round=15, activeUser=Валет
+2019-05-19 14:34:34 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=LOSE, set -5 points, round=15
+2019-05-19 14:34:36 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=59, secondNumber=6, roundNumber=16, roundResult=ODD, activeUser=Валет
+2019-05-19 14:34:36 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=16, roundResult=ODD, enemiesSize=2, activeUser=Валет
+2019-05-19 14:36:14 INFO  LogicManager:77 - Enemies created. Number of enemies=3
+2019-05-19 14:36:14 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=48, secondNumber=56, roundNumber=16, roundResult=EVEN, activeUser=Валет
+2019-05-19 14:36:14 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=16, roundResult=EVEN, enemiesSize=3, activeUser=Валет
+2019-05-19 14:36:39 INFO  LogicManager:21 - User Валет is logout
+2019-05-19 14:36:46 INFO  LogicManager:33 - User Валет login
+2019-05-19 14:36:47 INFO  LogicManager:77 - Enemies created. Number of enemies=3
+2019-05-19 14:36:47 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=29, secondNumber=80, roundNumber=16, roundResult=ODD, activeUser=Валет
+2019-05-19 14:36:47 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=16, roundResult=ODD, enemiesSize=3, activeUser=Валет
+2019-05-19 14:36:50 INFO  LogicManager:106 - getResultStringFromUserDecision. PlayerResult=WIN, activeUser=Валет
+2019-05-19 14:36:50 INFO  LogicManager:132 - setPoints. Kurisu choose ODD, result=WIN, set 7 points. Round=16, activeUser=Валет
+2019-05-19 14:36:50 INFO  LogicManager:132 - setPoints. Haruhi choose ODD, result=WIN, set 7 points. Round=16, activeUser=Валет
+2019-05-19 14:36:50 INFO  LogicManager:132 - setPoints. Yoko choose ODD, result=LOSE, set -7 points. Round=16, activeUser=Валет
+2019-05-19 14:36:50 INFO  LogicManager:138 - setPoints. User Валет choose ODD, result=WIN, set 7 points, round=16
+2019-05-19 14:36:52 INFO  LogicManager:93 - setNumbers. Result created. FirstNumber=65, secondNumber=32, roundNumber=17, roundResult=ODD, activeUser=Валет
+2019-05-19 14:36:52 INFO  LogicManager:99 - setNumbers. Enemies make a decision. RoundNumber=17, roundResult=ODD, enemiesSize=3, activeUser=Валет
