@@ -1,6 +1,6 @@
 package java;
 
-import main.java.CacheManager;
+import main.java.UsersHelper;
 import main.java.GameLogic;
 import main.java.LogicManager;
 
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class AbstractTest {
-    protected CacheManager cacheManager;
+    protected UsersHelper usersHelper;
     protected LogicManager logicManager;
     protected GameLogic gameLogic;
 
@@ -18,7 +18,7 @@ public class AbstractTest {
             Properties properties = new Properties();
             properties.load(new FileInputStream("src/test/resources/test.properties"));
             logicManager = new LogicManager(properties);
-            cacheManager = new CacheManager(logicManager);
+            usersHelper = new UsersHelper(logicManager);
             gameLogic = logicManager.gameLogic;
         } catch (IOException e) {}
     }

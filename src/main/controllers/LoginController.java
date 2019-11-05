@@ -27,7 +27,7 @@ public class LoginController {
             if (loginText.getText().length() < 3)
                 return;
 
-            logicManager.gameLogic.setActiveUser(logicManager.getOrCreateUser(loginText.getText()));
+            logicManager.gameLogic.setActiveUser(logicManager.getUserByName(loginText.getText()));
 
             Stage stage = (Stage) loginText.getScene().getWindow();
             GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/fxml/MenuWindow.fxml"));

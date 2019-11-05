@@ -6,29 +6,20 @@ import org.apache.log4j.Logger;
 import java.util.Properties;
 
 public class LogicManager {
-    public CacheManager cacheManager;
+    public UsersHelper usersHelper;
     public GameLogic gameLogic;
     public Properties properties;
     public final Logger log = Logger.getLogger(LogicManager.class);
 
     public LogicManager(Properties properties) {
         this.properties = properties;
-        cacheManager = new CacheManager(this);
+        usersHelper = new UsersHelper(this);
         gameLogic = new GameLogic(this);
 
     }
 
-    private User createNewUser(String name) {
-        User user = new User(name);
-        cacheManager.putUserByName(user);
-        return user;
-    }
-
-    public User getOrCreateUser(String name) {
-        User user;
-        user = cacheManager.getUserByName(name);
-        if (user == null)
-            user = createNewUser(name);
+    public User getUserByName(String name) {
+        User user = usersHelper.getOrCreateUser(name);
         gameLogic.setActiveUser(user);
         log.info(String.format("User %s login", name));
         return user;

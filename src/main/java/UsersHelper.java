@@ -7,16 +7,16 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CacheManager {
+public class UsersHelper {
     private final LogicManager logicManager;
     private Map<String, User> usersByName = new HashMap<>();
-    private final Logger log = Logger.getLogger(CacheManager.class);
+    private final Logger log = Logger.getLogger(UsersHelper.class);
     private final FileOutputStream outputStream;
 
     private final String pathToSaveFile = "settings.xml";
 
 
-    public CacheManager(LogicManager logicManager) {
+    public UsersHelper(LogicManager logicManager) {
         this.logicManager = logicManager;
         outputStream = createFileForResults();
 //        getAllUsers();
@@ -34,8 +34,20 @@ public class CacheManager {
         }
     }
 
-    private void saveUsers() {
+    private User createNewUser(String name) {
+        User user = new User(name);
+        log.trace("putUserByName. Put user with name=" + user.getName());
+        usersByName.put(user.getName(), user);
+        return user;
+    }
 
+    public User getOrCreateUser(String name) {
+        User user = usersByName.get(name);
+        return user != null ? user : createNewUser(name);
+    }
+
+    private void saveUsers() {
+        // TODO
     }
 
     private FileOutputStream createFileForResults() {
@@ -46,16 +58,6 @@ public class CacheManager {
             log.error("createFileForResults is failed. Message=" + e.getMessage());
             return null;
         }
-    }
-
-    public User getUserByName(String name) {
-        log.trace("getUserByName. Return user with name=" + name);
-        return usersByName.get(name);
-    }
-
-    public void putUserByName(User user) {
-        log.trace("putUserByName. Put user with name=" + user.getName());
-        usersByName.put(user.getName(), user);
     }
 
 }
