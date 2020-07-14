@@ -1,5 +1,6 @@
-package main.controllers;
+package edge.of.luck.controllers;
 
+import edge.of.luck.EdgeOfLuckMain;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,8 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import main.java.LogicManager;
-import main.java.Main;
+import edge.of.luck.classes.LogicManager;
 
 import java.io.IOException;
 
@@ -18,7 +18,7 @@ public class LoginController {
 
     @FXML
     private void initialize() {
-        this.logicManager = Main.logicManager;
+        this.logicManager = EdgeOfLuckMain.logicManager;
     }
 
 
@@ -30,7 +30,7 @@ public class LoginController {
             logicManager.gameLogic.setActiveUser(logicManager.getUserByName(loginText.getText()));
 
             Stage stage = (Stage) loginText.getScene().getWindow();
-            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/fxml/MenuWindow.fxml"));
+            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge.of.luck.fxml/MenuWindow.edge.of.luck.fxml"));
             Scene scene = new Scene(rootLayout);
 
             stage.setScene(scene);

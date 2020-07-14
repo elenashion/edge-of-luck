@@ -1,5 +1,6 @@
-package main.controllers;
+package edge.of.luck.controllers;
 
+import edge.of.luck.EdgeOfLuckMain;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,9 +8,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import main.java.GameLogic;
-import main.java.LogicManager;
-import main.java.Main;
+import edge.of.luck.classes.GameLogic;
+import edge.of.luck.classes.LogicManager;
 
 import java.io.IOException;
 
@@ -24,15 +24,15 @@ public class MenuController {
 
     @FXML
     private void initialize() {
-        this.logicManager = Main.logicManager;
-        this.gameLogic = Main.gameLogic;
+        this.logicManager = EdgeOfLuckMain.logicManager;
+        this.gameLogic = EdgeOfLuckMain.gameLogic;
     }
 
     public void logout(ActionEvent actionEvent) {
         try {
             logicManager.log.info(String.format("User %s is logout", gameLogic.getActiveUser().getName()));
             Stage stage = (Stage) logoutButton.getScene().getWindow();
-            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/fxml/LoginWindow.fxml"));
+            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge.of.luck.fxml/LoginWindow.edge.of.luck.fxml"));
             Scene scene = new Scene(rootLayout);
 
             stage.setScene(scene);
@@ -56,7 +56,7 @@ public class MenuController {
     public void chooseEnemies(ActionEvent actionEvent) {
         try {
             Stage stage = (Stage) logoutButton.getScene().getWindow();
-            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/fxml/ChooseEnemiesWindow.fxml"));
+            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge.of.luck.fxml/ChooseEnemiesWindow.edge.of.luck.fxml"));
             Scene scene = new Scene(rootLayout);
 
             stage.setScene(scene);
@@ -69,11 +69,11 @@ public class MenuController {
 
     public void startGame(ActionEvent actionEvent) {
         try {
-            int enemiesNumber = Integer.valueOf(((Button) actionEvent.getTarget()).getText());
+            int enemiesNumber = Integer.parseInt(((Button) actionEvent.getTarget()).getText());
             gameLogic.createEnemies(enemiesNumber);
 
             Stage stage = (Stage) ((Button) actionEvent.getTarget()).getScene().getWindow();
-            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/fxml/GameWindow.fxml"));
+            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge.of.luck.fxml/GameWindow.edge.of.luck.fxml"));
             Scene scene = new Scene(rootLayout);
 
             stage.setScene(scene);

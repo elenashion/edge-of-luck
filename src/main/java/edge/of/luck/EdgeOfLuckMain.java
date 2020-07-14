@@ -1,5 +1,7 @@
-package main.java;
+package edge.of.luck;
 
+import edge.of.luck.classes.GameLogic;
+import edge.of.luck.classes.LogicManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,7 +12,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class Main extends Application {
+public class EdgeOfLuckMain extends Application {
     public static LogicManager logicManager;
     public static GameLogic gameLogic;
     private Stage primaryStage;
@@ -37,7 +39,7 @@ public class Main extends Application {
 
     private void initRootLayout() {
         try {
-            rootLayout = FXMLLoader.load(getClass().getResource("/main/fxml/LoginWindow.fxml"));
+            rootLayout = FXMLLoader.load(getClass().getResource("/main/edge.of.luck.fxml/LoginWindow.edge.of.luck.fxml"));
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             primaryStage.show();

@@ -1,4 +1,4 @@
-package main.java.entities;
+package edge.of.luck.entities;
 
 import java.util.HashMap;
 import java.util.Map;

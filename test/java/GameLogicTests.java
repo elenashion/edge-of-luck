@@ -1,9 +1,12 @@
-package java;
+//package java;
 
-import main.java.entities.ComputerPlayer;
-import main.java.entities.GameChoice;
-import main.java.entities.User;
+import edge.of.luck.entities.ComputerPlayer;
+import edge.of.luck.entities.GameChoice;
+import edge.of.luck.entities.User;
 import org.junit.Test;
+
+import java.AbstractTest;
+
 import static org.junit.Assert.*;
 
 public class GameLogicTests extends AbstractTest {
@@ -41,10 +44,10 @@ public class GameLogicTests extends AbstractTest {
         ComputerPlayer enemy2 = gameLogic.getEnemyByNumber(2);
 
         for (int i = 0; i < 100; i++)
-            assertEquals(GameChoice.EVEN ,enemy1.makeADecision(i));
+            assertEquals(GameChoice.EVEN, enemy1.makeADecision(i));
 
         for (int i = 0; i < 100; i++)
-            assertEquals(GameChoice.ODD ,enemy2.makeADecision(i));
+            assertEquals(GameChoice.ODD, enemy2.makeADecision(i));
 
     }
 

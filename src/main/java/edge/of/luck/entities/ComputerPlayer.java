@@ -1,6 +1,6 @@
-package main.java.entities;
+package edge.of.luck.entities;
 
-import main.java.GameLogic;
+import edge.of.luck.classes.GameLogic;
 
 import java.util.Arrays;
 import java.util.HashMap;

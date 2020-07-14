@@ -1,9 +1,9 @@
-package main.java;
+package edge.of.luck.classes;
 
-import main.java.entities.ComputerPlayer;
-import main.java.entities.GameChoice;
-import main.java.entities.GameResult;
-import main.java.entities.User;
+import edge.of.luck.entities.ComputerPlayer;
+import edge.of.luck.entities.GameChoice;
+import edge.of.luck.entities.GameResult;
+import edge.of.luck.entities.User;
 import org.apache.log4j.Logger;
 
 import java.math.BigDecimal;

@@ -1,6 +1,6 @@
-package main.java;
+package edge.of.luck.classes;
 
-import main.java.entities.User;
+import edge.of.luck.entities.User;
 import org.apache.log4j.Logger;
 
 import java.util.Properties;

@@ -1,8 +1,8 @@
 package java;
 
-import main.java.UsersHelper;
-import main.java.GameLogic;
-import main.java.LogicManager;
+import edge.of.luck.classes.UsersHelper;
+import edge.of.luck.classes.GameLogic;
+import edge.of.luck.classes.LogicManager;
 
 import java.io.FileInputStream;
 import java.io.IOException;

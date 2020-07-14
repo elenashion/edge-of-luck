@@ -1,5 +1,6 @@
-package main.controllers;
+package edge.of.luck.controllers;
 
+import edge.of.luck.entities.GameChoice;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,9 +10,8 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import main.java.GameLogic;
-import main.java.Main;
-import main.java.entities.GameChoice;
+import edge.of.luck.classes.GameLogic;
+import edge.of.luck.EdgeOfLuckMain;
 
 import java.io.IOException;
 
@@ -36,7 +36,7 @@ public class GameController {
 
     @FXML
     private void initialize() {
-        this.gameLogic = Main.gameLogic;
+        this.gameLogic = EdgeOfLuckMain.gameLogic;
         gameLogic.resetRound();
 
         gameLogic.setNumbers();
@@ -118,7 +118,7 @@ public class GameController {
     public void returnToMenu(ActionEvent actionEvent) {
         try {
             Stage stage = (Stage) ((Button) actionEvent.getTarget()).getScene().getWindow();
-            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/fxml/MenuWindow.fxml"));
+            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge.of.luck.fxml/MenuWindow.edge.of.luck.fxml"));
 
             Scene scene = new Scene(rootLayout);
             stage.setScene(scene);

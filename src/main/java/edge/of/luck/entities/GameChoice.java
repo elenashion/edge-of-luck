@@ -1,4 +1,4 @@
-package main.java.entities;
+package edge.of.luck.entities;
 
 public enum GameChoice {
     EVEN,
