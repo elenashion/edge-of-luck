@@ -39,7 +39,7 @@ public class EdgeOfLuckMain extends Application {
 
     private void initRootLayout() {
         try {
-            rootLayout = FXMLLoader.load(getClass().getResource("/main/edge.of.luck.fxml/LoginWindow.edge.of.luck.fxml"));
+            rootLayout = FXMLLoader.load(getClass().getResource("/main/edge/of/luck/fxml/LoginWindow.fxml"));
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             primaryStage.show();

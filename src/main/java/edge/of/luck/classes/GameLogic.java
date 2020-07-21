@@ -4,15 +4,17 @@ import edge.of.luck.entities.ComputerPlayer;
 import edge.of.luck.entities.GameChoice;
 import edge.of.luck.entities.GameResult;
 import edge.of.luck.entities.User;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class GameLogic {
-    private final Logger log = Logger.getLogger(GameLogic.class);
+    private final Logger log = LoggerContext.getContext().getLogger("GameLogic");
     private int round = 0;
 
     private int firstNumber;

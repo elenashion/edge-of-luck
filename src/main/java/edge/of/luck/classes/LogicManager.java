@@ -1,7 +1,8 @@
 package edge.of.luck.classes;
 
 import edge.of.luck.entities.User;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
 
 import java.util.Properties;
 
@@ -9,7 +10,7 @@ public class LogicManager {
     public UsersHelper usersHelper;
     public GameLogic gameLogic;
     public Properties properties;
-    public final Logger log = Logger.getLogger(LogicManager.class);
+    public final Logger log = LoggerContext.getContext().getLogger("LogicManager");
 
     public LogicManager(Properties properties) {
         this.properties = properties;

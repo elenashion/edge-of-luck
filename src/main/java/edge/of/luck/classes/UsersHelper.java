@@ -1,7 +1,8 @@
 package edge.of.luck.classes;
 
 import edge.of.luck.entities.User;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
 
 import java.io.*;
 import java.util.HashMap;
@@ -10,7 +11,7 @@ import java.util.Map;
 public class UsersHelper {
     private final LogicManager logicManager;
     private Map<String, User> usersByName = new HashMap<>();
-    private final Logger log = Logger.getLogger(UsersHelper.class);
+    private final Logger log = LoggerContext.getContext().getLogger("UsersHelper");
     private final FileOutputStream outputStream;
 
     private final String pathToSaveFile = "settings.xml";
