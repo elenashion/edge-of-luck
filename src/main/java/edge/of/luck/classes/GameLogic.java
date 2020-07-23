@@ -1,8 +1,8 @@
 package edge.of.luck.classes;
 
 import edge.of.luck.entities.ComputerPlayer;
-import edge.of.luck.entities.GameChoice;
-import edge.of.luck.entities.GameResult;
+import edge.of.luck.entities.enums.GameChoice;
+import edge.of.luck.entities.enums.GameResult;
 import edge.of.luck.entities.User;
 import org.apache.logging.log4j.core.Logger;
 import org.apache.logging.log4j.core.LoggerContext;
@@ -50,7 +50,7 @@ public class GameLogic {
 
     public void createEnemies(int number) {
         if (number <= 0 || number > MAX_ENEMIES_SIZE) {
-            log.error(String.format("Enemies number is incorrect! Number=%s", number));
+            log.error("Enemies number is incorrect! Number={}", number);
             return;
         }
         activeEnemies.clear();
@@ -70,11 +70,11 @@ public class GameLogic {
                 }
             }
         }
-        log.info(String.format("Enemies created. Number of enemies=%s", number));
+        log.info("Enemies created. Number of enemies={}", number);
     }
 
     public int getRandom() {
-        return Integer.valueOf(String.valueOf(new BigDecimal(Math.random() * 100).abs().divide(BigDecimal.ONE, 0, RoundingMode.DOWN)));
+        return Integer.parseInt(new BigDecimal(Math.random() * 100).abs().divide(BigDecimal.ONE, 0, RoundingMode.DOWN).toString());
     }
 
     public int getFirstNumber() { return firstNumber; }
@@ -86,20 +86,20 @@ public class GameLogic {
         firstNumber = getRandom();
         secondNumber = getRandom();
         roundResult = (firstNumber + secondNumber) % 2 == 1 ? GameChoice.ODD : GameChoice.EVEN;
-        log.info(String.format("setNumbers. Result created. FirstNumber=%s, secondNumber=%s, roundNumber=%s, roundResult=%s, activeUser=%s", firstNumber, secondNumber, round, roundResult, activeUser.getName()));
+        log.info("setNumbers. Result created. FirstNumber={}, secondNumber={}, roundNumber={}, roundResult={}, activeUser={}", firstNumber, secondNumber, round, roundResult, activeUser.getName());
 
         for (ComputerPlayer cp : activeEnemies) {
             GameChoice result = cp.makeADecision(round);
             cp.putResult(round, roundResult == result ? GameResult.WIN : GameResult.LOSE);
         }
-        log.info(String.format("setNumbers. Enemies make a decision. RoundNumber=%s, roundResult=%s, enemiesSize=%s, activeUser=%s", round, roundResult, activeEnemies.size(), activeUser.getName()));
+        log.info("setNumbers. Enemies make a decision. RoundNumber={}, roundResult={}, enemiesSize={}, activeUser={}", round, roundResult, activeEnemies.size(), activeUser.getName());
     }
 
     public String getResultStringFromUserDecision(GameChoice choice) {
         activeUser.getDecisions().put(round, choice);
         GameResult playerResult = roundResult == choice ? GameResult.WIN : GameResult.LOSE;
         activeUser.getResults().put(round, playerResult);
-        log.info(String.format("getResultStringFromUserDecision. PlayerResult=%s, activeUser=%s", playerResult, activeUser.getName()));
+        log.info("getResultStringFromUserDecision. PlayerResult={}, activeUser={}", playerResult, activeUser.getName());
         setPoints(playerResult);
         return playerResult.getResult();
     }
@@ -125,13 +125,13 @@ public class GameLogic {
                 points = userLoseEnemyLoseEnemyPoints;
             }
             cp.setPoints(points);
-            log.info(String.format("setPoints. %s choose %s, result=%s, set %s points. Round=%s, activeUser=%s",
-                    cp.getName(), cp.getChoiceByRound(round), cp.getResultByRound(round), points, round, activeUser.getName()));
+            log.info("setPoints. {} choose {}, result={}, set {} points. Round={}, activeUser={}",
+                    cp.getName(), cp.getChoiceByRound(round), cp.getResultByRound(round), points, round, activeUser.getName());
         }
 
         int points = (player && enemies == 0) ? userWinEnemyLoseUserPoints : player ? userWinEnemyWinUserPoints : enemies == 0 ? userLoseEnemyLoseUserPoints : userLoseEnemyWinUserPoints;
         activeUser.setPoints(points);
-        log.info(String.format("setPoints. User %s choose %s, result=%s, set %s points, round=%s", activeUser.getName(), activeUser.getChoiceByRound(round), playerResult, points, round));
+        log.info("setPoints. User {} choose {}, result={}, set {} points, round={}", activeUser.getName(), activeUser.getChoiceByRound(round), playerResult, points, round);
     }
 
 

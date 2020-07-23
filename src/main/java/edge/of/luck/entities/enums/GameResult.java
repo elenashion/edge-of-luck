@@ -1,4 +1,4 @@
-package edge.of.luck.entities;
+package edge.of.luck.entities.enums;
 
 public enum GameResult {
     WIN("Вы угадали"),

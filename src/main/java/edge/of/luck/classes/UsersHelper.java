@@ -12,14 +12,14 @@ public class UsersHelper {
     private final LogicManager logicManager;
     private Map<String, User> usersByName = new HashMap<>();
     private final Logger log = LoggerContext.getContext().getLogger("UsersHelper");
-    private final FileOutputStream outputStream;
+//    private final FileOutputStream outputStream;
 
     private final String pathToSaveFile = "settings.xml";
 
 
     public UsersHelper(LogicManager logicManager) {
         this.logicManager = logicManager;
-        outputStream = createFileForResults();
+//        outputStream = createFileForResults();
 //        getAllUsers();
 
     }
@@ -31,13 +31,13 @@ public class UsersHelper {
 
             // TODO
         } catch (IOException e) {
-            log.error("getAllUsers is failed. Message=" + e.getMessage());
+            log.error("getAllUsers is failed. Message={}", e.getMessage());
         }
     }
 
     private User createNewUser(String name) {
         User user = new User(name);
-        log.trace("putUserByName. Put user with name=" + user.getName());
+        log.trace("putUserByName. Put user with name={}", user.getName());
         usersByName.put(user.getName(), user);
         return user;
     }
@@ -56,7 +56,7 @@ public class UsersHelper {
             File file = new File(pathToSaveFile);
             return new FileOutputStream(file.getAbsolutePath(), true);
         } catch (FileNotFoundException e) {
-            log.error("createFileForResults is failed. Message=" + e.getMessage());
+            log.error("createFileForResults is failed. Message={}", e.getMessage());
             return null;
         }
     }

@@ -22,7 +22,7 @@ public class LogicManager {
     public User getUserByName(String name) {
         User user = usersHelper.getOrCreateUser(name);
         gameLogic.setActiveUser(user);
-        log.info(String.format("User %s login", name));
+        log.info("User {} login", name);
         return user;
     }
 }

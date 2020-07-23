@@ -32,7 +32,7 @@ public class MenuController {
         try {
             logicManager.log.info(String.format("User %s is logout", gameLogic.getActiveUser().getName()));
             Stage stage = (Stage) logoutButton.getScene().getWindow();
-            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge.of.luck.fxml/LoginWindow.edge.of.luck.fxml"));
+            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge/of/luck/fxml/LoginWindow.fxml"));
             Scene scene = new Scene(rootLayout);
 
             stage.setScene(scene);

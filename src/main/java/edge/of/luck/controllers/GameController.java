@@ -1,6 +1,6 @@
 package edge.of.luck.controllers;
 
-import edge.of.luck.entities.GameChoice;
+import edge.of.luck.entities.enums.GameChoice;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -118,7 +118,7 @@ public class GameController {
     public void returnToMenu(ActionEvent actionEvent) {
         try {
             Stage stage = (Stage) ((Button) actionEvent.getTarget()).getScene().getWindow();
-            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge.of.luck.fxml/MenuWindow.edge.of.luck.fxml"));
+            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge/of/luck/fxml/MenuWindow.fxml"));
 
             Scene scene = new Scene(rootLayout);
             stage.setScene(scene);

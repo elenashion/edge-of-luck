@@ -1,6 +1,8 @@
 package edge.of.luck.entities;
 
 import edge.of.luck.classes.GameLogic;
+import edge.of.luck.entities.enums.GameChoice;
+import edge.of.luck.entities.enums.GameResult;
 
 import java.util.Arrays;
 import java.util.HashMap;

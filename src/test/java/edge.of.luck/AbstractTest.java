@@ -1,4 +1,4 @@
-package java;
+package edge.of.luck;
 
 import edge.of.luck.classes.UsersHelper;
 import edge.of.luck.classes.GameLogic;

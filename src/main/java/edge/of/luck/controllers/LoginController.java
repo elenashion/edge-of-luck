@@ -30,7 +30,7 @@ public class LoginController {
             logicManager.gameLogic.setActiveUser(logicManager.getUserByName(loginText.getText()));
 
             Stage stage = (Stage) loginText.getScene().getWindow();
-            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge.of.luck.fxml/MenuWindow.edge.of.luck.fxml"));
+            GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge/of/luck/fxml/MenuWindow.fxml"));
             Scene scene = new Scene(rootLayout);
 
             stage.setScene(scene);

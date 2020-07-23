@@ -1,11 +1,9 @@
-//package java;
+package edge.of.luck;
 
 import edge.of.luck.entities.ComputerPlayer;
-import edge.of.luck.entities.GameChoice;
+import edge.of.luck.entities.enums.GameChoice;
 import edge.of.luck.entities.User;
 import org.junit.Test;
-
-import java.AbstractTest;
 
 import static org.junit.Assert.*;
 
