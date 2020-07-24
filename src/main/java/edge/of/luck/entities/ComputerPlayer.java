@@ -68,8 +68,6 @@ public class ComputerPlayer {
                     return makeSpecialDecision(round) == GameChoice.EVEN ? GameChoice.ODD : GameChoice.EVEN;
                 else
                     return makeSpecialDecision(round);
-            case 1:
-                return makeADecisionWithoutList(round);
             case 2:
                 if (round % 10 == 0)
                     return makeSpecialDecision(round);

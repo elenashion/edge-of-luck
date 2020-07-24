@@ -13,6 +13,8 @@ dependencies {
     implementation('org.openjfx:javafx-base:15-ea+7:win')
     implementation('org.openjfx:javafx-graphics:15-ea+7:win')
 
+    implementation ('com.h2database:h2:1.4.200')
+
 
     testImplementation('junit:junit:4.+')
 
