@@ -9,15 +9,16 @@ import java.util.Map;
 public class User {
     private final String name;
     private int points;
+    private int roundNumber;
     private Map<Integer, GameChoice> decisions;
     private Map<Integer, GameResult> results;
 
-    public Map<Integer, GameResult> getResults() {
-        return results;
+    public void putResult(int round, GameResult result) {
+        results.put(round, result);
     }
 
-    public Map<Integer, GameChoice> getDecisions() {
-        return decisions;
+    public void putDecisions(int round, GameChoice choice) {
+        decisions.put(round, choice);
     }
 
     public String getName() {
@@ -28,8 +29,12 @@ public class User {
         return points;
     }
 
-    public GameResult getResultByRound(int round) {
-        return results.get(round);
+    public int getRoundNumber() {
+        return roundNumber;
+    }
+
+    public void setRoundNumber(int roundNumber) {
+        this.roundNumber = roundNumber;
     }
 
     public GameChoice getChoiceByRound(int round) {

@@ -83,6 +83,7 @@ public class GameLogic {
 
     public void setNumbers () {
         round++;
+        activeUser.setRoundNumber(round);
         firstNumber = getRandom();
         secondNumber = getRandom();
         roundResult = (firstNumber + secondNumber) % 2 == 1 ? GameChoice.ODD : GameChoice.EVEN;
@@ -96,16 +97,16 @@ public class GameLogic {
     }
 
     public String getResultStringFromUserDecision(GameChoice choice) {
-        activeUser.getDecisions().put(round, choice);
+        activeUser.putDecisions(round, choice);
         GameResult playerResult = roundResult == choice ? GameResult.WIN : GameResult.LOSE;
-        activeUser.getResults().put(round, playerResult);
+        activeUser.putResult(round, playerResult);
         log.info("getResultStringFromUserDecision. PlayerResult={}, activeUser={}", playerResult, activeUser.getName());
         setPoints(playerResult);
         return playerResult.getResult();
     }
 
     public void resetRound() {
-        round = activeUser.getDecisions().size() - 1;
+        round = activeUser.getRoundNumber();
     }
 
     private void setPoints(GameResult playerResult) {
