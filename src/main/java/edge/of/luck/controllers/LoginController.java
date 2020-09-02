@@ -1,6 +1,7 @@
 package edge.of.luck.controllers;
 
-import edge.of.luck.EdgeOfLuckMain;
+import edge.of.luck.classes.GameLogic;
+import edge.of.luck.classes.UsersHelper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,17 +9,22 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import edge.of.luck.classes.LogicManager;
+import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 
 public class LoginController {
     public TextField loginText;
-    private LogicManager logicManager;
+    @Autowired
+    private GameLogic gameLogic;
+    @Autowired
+    private UsersHelper usersHelper;
+    private final Logger log = LoggerContext.getContext().getLogger("LoginController");
 
     @FXML
     private void initialize() {
-        this.logicManager = EdgeOfLuckMain.logicManager;
     }
 
 
@@ -27,7 +33,7 @@ public class LoginController {
             if (loginText.getText().length() < 3)
                 return;
 
-            logicManager.gameLogic.setActiveUser(logicManager.getUserByName(loginText.getText()));
+            gameLogic.setActiveUser(usersHelper.getOrCreateUserByName(loginText.getText()));
 
             Stage stage = (Stage) loginText.getScene().getWindow();
             GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge/of/luck/fxml/MenuWindow.fxml"));

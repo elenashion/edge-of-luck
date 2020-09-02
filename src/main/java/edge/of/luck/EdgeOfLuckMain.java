@@ -1,30 +1,23 @@
 package edge.of.luck;
 
-import edge.of.luck.classes.GameLogic;
-import edge.of.luck.classes.LogicManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 
+@SpringBootApplication
 public class EdgeOfLuckMain extends Application {
-    public static LogicManager logicManager;
-    public static GameLogic gameLogic;
     private Stage primaryStage;
     private GridPane rootLayout;
 
     public static void main(String[] args) throws IOException {
-        Properties properties = new Properties();
-        properties.load(new FileInputStream("src/main/resources/main.properties"));
-        logicManager = new LogicManager(properties);
-        gameLogic = logicManager.gameLogic;
-
-        launch(args);
+        SpringApplication.run(Application.class, args);
+//        launch(args);
     }
 
 

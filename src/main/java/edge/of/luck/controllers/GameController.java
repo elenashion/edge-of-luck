@@ -11,12 +11,20 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import edge.of.luck.classes.GameLogic;
-import edge.of.luck.EdgeOfLuckMain;
+import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 
+@RestController
+@RequestMapping("/game")
 public class GameController {
+    @Autowired
     private GameLogic gameLogic;
+    private final Logger log = LoggerContext.getContext().getLogger("GameController");
     public Text firstEnemyName;
     public Text playerName;
     public Text firstEnemyPoints;
@@ -36,7 +44,6 @@ public class GameController {
 
     @FXML
     private void initialize() {
-        this.gameLogic = EdgeOfLuckMain.gameLogic;
         gameLogic.resetRound();
 
         gameLogic.setNumbers();

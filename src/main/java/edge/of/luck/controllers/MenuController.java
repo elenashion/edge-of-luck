@@ -9,28 +9,32 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import edge.of.luck.classes.GameLogic;
-import edge.of.luck.classes.LogicManager;
+import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
+@RestController
+@RequestMapping("/menu")
 public class MenuController {
     public Button logoutButton;
     public Button startGameButton1;
     public Button startGameButton2;
     public Button startGameButton3;
-    private LogicManager logicManager;
+    @Autowired
     private GameLogic gameLogic;
+    private final Logger log = LoggerContext.getContext().getLogger("MenuController");
 
 
     @FXML
     private void initialize() {
-        this.logicManager = EdgeOfLuckMain.logicManager;
-        this.gameLogic = EdgeOfLuckMain.gameLogic;
     }
 
     public void logout(ActionEvent actionEvent) {
         try {
-            logicManager.log.info(String.format("User %s is logout", gameLogic.getActiveUser().getName()));
+            log.info(String.format("User %s is logout", gameLogic.getActiveUser().getName()));
             Stage stage = (Stage) logoutButton.getScene().getWindow();
             GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge/of/luck/fxml/LoginWindow.fxml"));
             Scene scene = new Scene(rootLayout);
@@ -43,7 +47,7 @@ public class MenuController {
     }
 
     public void exit(ActionEvent actionEvent) {
-        logicManager.log.info("Exit from program");
+        log.info("Exit from program");
         System.exit(0);
     }
 

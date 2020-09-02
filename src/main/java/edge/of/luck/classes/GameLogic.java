@@ -6,45 +6,49 @@ import edge.of.luck.entities.enums.GameResult;
 import edge.of.luck.entities.User;
 import org.apache.logging.log4j.core.Logger;
 import org.apache.logging.log4j.core.LoggerContext;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-
+@Component
 public class GameLogic {
     private final Logger log = LoggerContext.getContext().getLogger("GameLogic");
+
     private int round = 0;
 
     private int firstNumber;
     private int secondNumber;
     private GameChoice roundResult;
 
-    private final int MAX_ENEMIES_SIZE;
+    @Value("${main.maxEnemiesSize:3}")
+    private int MAX_ENEMIES_SIZE;
     private User activeUser;
-    private List<ComputerPlayer> activeEnemies = new ArrayList<>();
+    private final List<ComputerPlayer> activeEnemies = new ArrayList<>();
 
-    private final int userWinEnemyLoseUserPoints;
-    private final int userWinEnemyWinUserPoints;
-    private final int userLoseEnemyWinUserPoints;
-    private final int userLoseEnemyLoseUserPoints;
-    private final int userWinEnemyLoseEnemyPoints;
-    private final int userWinEnemyWinEnemyPoints;
-    private final int userLoseEnemyWinEnemyPoints;
-    private final int userLoseEnemyLoseEnemyPoints;
+    @Value("${main.points.user.userWinEnemyLose}")
+    private int userWinEnemyLoseUserPoints;
+    @Value("${main.points.user.userWinEnemyWin}")
+    private int userWinEnemyWinUserPoints;
+    @Value("${main.points.user.userLoseEnemyWin}")
+    private int userLoseEnemyWinUserPoints;
+    @Value("${main.points.user.userLoseEnemyLose}")
+    private int userLoseEnemyLoseUserPoints;
+    @Value("${main.points.enemy.userWinEnemyLose}")
+    private int userWinEnemyLoseEnemyPoints;
+    @Value("${main.points.enemy.userWinEnemyWin}")
+    private int userWinEnemyWinEnemyPoints;
+    @Value("${main.points.enemy.userLoseEnemyWin}")
+    private int userLoseEnemyWinEnemyPoints;
+    @Value("${main.points.enemy.userLoseEnemyLose}")
+    private int userLoseEnemyLoseEnemyPoints;
 
 
-    public GameLogic(LogicManager logicManager) {
-        MAX_ENEMIES_SIZE = Integer.valueOf(logicManager.properties.getProperty("main.maxEnemiesSize"));
-        userWinEnemyLoseUserPoints = Integer.valueOf(logicManager.properties.getProperty("main.user.points.userWinEnemyLose"));
-        userWinEnemyWinUserPoints = Integer.valueOf(logicManager.properties.getProperty("main.user.points.userWinEnemyWin"));
-        userLoseEnemyWinUserPoints = Integer.valueOf(logicManager.properties.getProperty("main.user.points.userLoseEnemyWin"));
-        userLoseEnemyLoseUserPoints = Integer.valueOf(logicManager.properties.getProperty("main.user.points.userLoseEnemyLose"));
-        userWinEnemyLoseEnemyPoints = Integer.valueOf(logicManager.properties.getProperty("main.enemy.points.userWinEnemyLose"));
-        userWinEnemyWinEnemyPoints = Integer.valueOf(logicManager.properties.getProperty("main.enemy.points.userWinEnemyWin"));
-        userLoseEnemyWinEnemyPoints = Integer.valueOf(logicManager.properties.getProperty("main.enemy.points.userLoseEnemyWin"));
-        userLoseEnemyLoseEnemyPoints = Integer.valueOf(logicManager.properties.getProperty("main.enemy.points.userLoseEnemyLose"));
+    public GameLogic() {
 
     }
 
@@ -55,25 +59,12 @@ public class GameLogic {
         }
         activeEnemies.clear();
         for (int i = 0; i < number; i++) {
-            activeEnemies.add(i, new ComputerPlayer(this, i));
-        }
-        for (int i = 0; i < number; i++) {
-            ComputerPlayer enemy = activeEnemies.get(i);
-            for (int j = 0; j < number; j++) {
-                if (i == j)
-                    continue;
-                if (enemy.getName().equals(activeEnemies.get(j).getName())){
-                    activeEnemies.remove(j);
-                    activeEnemies.add(j, new ComputerPlayer(this, j));
-                    i = 0;
-                    j = 0;
-                }
-            }
+            activeEnemies.add(i, new ComputerPlayer(i, activeEnemies.stream().map(ComputerPlayer::getName).collect(Collectors.toSet())));
         }
         log.info("Enemies created. Number of enemies={}", number);
     }
 
-    public int getRandom() {
+    public static int getRandom() {
         return Integer.parseInt(new BigDecimal(Math.random() * 100).abs().divide(BigDecimal.ONE, 0, RoundingMode.DOWN).toString());
     }
 

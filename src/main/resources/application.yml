@@ -1,0 +1,16 @@
+
+
+main:
+  maxEnemiesSize: 3
+  points:
+    enemy:
+      userWinEnemyLose: 18
+      userWinEnemyWin: 14
+      userLoseEnemyWin: -10
+      userLoseEnemyLose: -6
+
+    user:
+      userWinEnemyLose: -14
+      userWinEnemyWin: 14
+      userLoseEnemyWin: 20
+      userLoseEnemyLose: -10
