@@ -9,7 +9,7 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
-@Component
+//@Component
 public class UsersHelper {
     private Map<String, User> usersByName = new HashMap<>();
     private final Logger log = LoggerContext.getContext().getLogger("UsersHelper");

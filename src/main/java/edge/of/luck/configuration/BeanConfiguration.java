@@ -2,14 +2,17 @@ package edge.of.luck.configuration;
 
 import edge.of.luck.classes.GameLogic;
 import edge.of.luck.classes.UsersHelper;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.server.WebServer;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 @Configuration
+@ComponentScan(basePackageClasses = BeanConfiguration.class)
 public class BeanConfiguration {
     BeanConfiguration() {
     }
@@ -28,7 +31,7 @@ public class BeanConfiguration {
 
     @Bean
     @Primary
-    public ServletWebServerFactory factory() {
-        return initializers -> null;
+    public ServletWebServerFactory servletWebServerFactory() {
+        return new TomcatServletWebServerFactory();
     }
 }

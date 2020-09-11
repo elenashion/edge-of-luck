@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component
+//@Component
 public class GameLogic {
     private final Logger log = LoggerContext.getContext().getLogger("GameLogic");
 
@@ -52,6 +52,10 @@ public class GameLogic {
 
     }
 
+    public static int getRandom() {
+        return Integer.parseInt(new BigDecimal(Math.random() * 100).abs().divide(BigDecimal.ONE, 0, RoundingMode.DOWN).toString());
+    }
+
     public void createEnemies(int number) {
         if (number <= 0 || number > MAX_ENEMIES_SIZE) {
             log.error("Enemies number is incorrect! Number={}", number);
@@ -64,13 +68,13 @@ public class GameLogic {
         log.info("Enemies created. Number of enemies={}", number);
     }
 
-    public static int getRandom() {
-        return Integer.parseInt(new BigDecimal(Math.random() * 100).abs().divide(BigDecimal.ONE, 0, RoundingMode.DOWN).toString());
+    public int getFirstNumber() {
+        return firstNumber;
     }
 
-    public int getFirstNumber() { return firstNumber; }
-
-    public int getSecondNumber() { return secondNumber; }
+    public int getSecondNumber() {
+        return secondNumber;
+    }
 
     public void setNumbers () {
         round++;

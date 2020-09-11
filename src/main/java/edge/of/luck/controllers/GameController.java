@@ -3,7 +3,6 @@ package edge.of.luck.controllers;
 import edge.of.luck.entities.enums.GameChoice;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -13,7 +12,7 @@ import javafx.stage.Stage;
 import edge.of.luck.classes.GameLogic;
 import org.apache.logging.log4j.core.Logger;
 import org.apache.logging.log4j.core.LoggerContext;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,8 +21,7 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/game")
 public class GameController {
-    @Autowired
-    private GameLogic gameLogic;
+    private final GameLogic gameLogic;
     private final Logger log = LoggerContext.getContext().getLogger("GameController");
     public Text firstEnemyName;
     public Text playerName;
@@ -42,10 +40,13 @@ public class GameController {
     public Text thirdEnemyName;
     public Text thirdEnemyPoints;
 
-    @FXML
-    private void initialize() {
-        gameLogic.resetRound();
+    GameController(GameLogic gameLogic) {
+        this.gameLogic = gameLogic;
+        init();
+    }
 
+    private void init() {
+        gameLogic.resetRound();
         gameLogic.setNumbers();
         setStartVars();
     }
@@ -73,6 +74,13 @@ public class GameController {
     public void chooseOdd(ActionEvent actionEvent) {
         blockButtons();
         String text = gameLogic.getResultStringFromUserDecision(GameChoice.ODD);
+        afterChoose(text);
+    }
+
+    @PostMapping("/logout")
+    public void choose(GameChoice choice) {
+        blockButtons();
+        String text = gameLogic.getResultStringFromUserDecision(choice);
         afterChoose(text);
     }
 
@@ -122,6 +130,7 @@ public class GameController {
         new Thread(timer).start();
     }
 
+    @PostMapping("/returnToMenu")
     public void returnToMenu(ActionEvent actionEvent) {
         try {
             Stage stage = (Stage) ((Button) actionEvent.getTarget()).getScene().getWindow();

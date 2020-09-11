@@ -7,27 +7,29 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import java.io.IOException;
 
 @SpringBootApplication
-public class EdgeOfLuckMain extends Application {
+public class EdgeOfLuckMain extends SpringBootServletInitializer {
     private Stage primaryStage;
     private GridPane rootLayout;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
 //        launch(args);
     }
 
 
-    @Override
+/*    @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Edge of Luck");
 
         initRootLayout();
-    }
+    }*/
+    
 
 
     private void initRootLayout() {

@@ -1,8 +1,6 @@
 package edge.of.luck.controllers;
 
-import edge.of.luck.EdgeOfLuckMain;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -11,7 +9,6 @@ import javafx.stage.Stage;
 import edge.of.luck.classes.GameLogic;
 import org.apache.logging.log4j.core.Logger;
 import org.apache.logging.log4j.core.LoggerContext;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -23,15 +20,14 @@ public class MenuController {
     public Button startGameButton1;
     public Button startGameButton2;
     public Button startGameButton3;
-    @Autowired
-    private GameLogic gameLogic;
+    private final GameLogic gameLogic;
     private final Logger log = LoggerContext.getContext().getLogger("MenuController");
 
-
-    @FXML
-    private void initialize() {
+    MenuController(GameLogic gameLogic) {
+        this.gameLogic = gameLogic;
     }
 
+    @PostMapping("/logout")
     public void logout(ActionEvent actionEvent) {
         try {
             log.info(String.format("User %s is logout", gameLogic.getActiveUser().getName()));
@@ -51,12 +47,15 @@ public class MenuController {
         System.exit(0);
     }
 
+    @PostMapping("/logout")
     public void getRecords(ActionEvent actionEvent) {
     }
 
+    @GetMapping("/getRecords")
     public void getRules(ActionEvent actionEvent) {
     }
 
+    @PostMapping("/chooseEnemies")
     public void chooseEnemies(ActionEvent actionEvent) {
         try {
             Stage stage = (Stage) logoutButton.getScene().getWindow();
@@ -71,6 +70,7 @@ public class MenuController {
     }
 
 
+    @PostMapping("/startGame")
     public void startGame(ActionEvent actionEvent) {
         try {
             int enemiesNumber = Integer.parseInt(((Button) actionEvent.getTarget()).getText());

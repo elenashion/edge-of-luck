@@ -3,7 +3,6 @@ package edge.of.luck.controllers;
 import edge.of.luck.classes.GameLogic;
 import edge.of.luck.classes.UsersHelper;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
@@ -11,23 +10,31 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.core.Logger;
 import org.apache.logging.log4j.core.LoggerContext;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 
+@RestController
+@RequestMapping("/login")
 public class LoginController {
     public TextField loginText;
-    @Autowired
-    private GameLogic gameLogic;
-    @Autowired
-    private UsersHelper usersHelper;
+    private final GameLogic gameLogic;
+    private final UsersHelper usersHelper;
     private final Logger log = LoggerContext.getContext().getLogger("LoginController");
 
-    @FXML
-    private void initialize() {
+    LoginController(GameLogic gameLogic, UsersHelper usersHelper) {
+        this.gameLogic = gameLogic;
+        this.usersHelper = usersHelper;
     }
 
+    @PostMapping("/register")
+    public void register() {
 
+    }
+
+    @PostMapping("/login")
     public void login(ActionEvent actionEvent) {
         try {
             if (loginText.getText().length() < 3)
@@ -46,4 +53,5 @@ public class LoginController {
             e.printStackTrace();
         }
     }
+
 }
