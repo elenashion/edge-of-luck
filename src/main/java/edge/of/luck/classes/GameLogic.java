@@ -6,6 +6,7 @@ import edge.of.luck.entities.GameResultPoints;
 import edge.of.luck.entities.enums.GameChoice;
 import edge.of.luck.entities.enums.GameResult;
 import edge.of.luck.entities.User;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.math.BigDecimal;
@@ -19,7 +20,9 @@ public class GameLogic {
 
     private int round = 0;
 
+    @Getter
     private int firstNumber;
+    @Getter
     private int secondNumber;
     private GameChoice roundResult;
 
@@ -50,14 +53,6 @@ public class GameLogic {
             activeEnemies.add(i, new ComputerPlayer(i, activeEnemies.stream().map(ComputerPlayer::getName).collect(Collectors.toSet())));
         }
         log.info("Enemies created. Number of enemies={}", number);
-    }
-
-    public int getFirstNumber() {
-        return firstNumber;
-    }
-
-    public int getSecondNumber() {
-        return secondNumber;
     }
 
     public void setNumbers () {
