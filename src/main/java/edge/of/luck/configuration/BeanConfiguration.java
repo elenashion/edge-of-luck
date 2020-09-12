@@ -13,11 +13,9 @@ import org.springframework.core.env.Environment;
 @Configuration
 @EnableConfigurationProperties(PointsProperties.class)
 public class BeanConfiguration {
-    private Environment env;
-    private PointsProperties points;
+    private final PointsProperties points;
 
-    BeanConfiguration(Environment env, PointsProperties points) {
-        this.env = env;
+    BeanConfiguration(PointsProperties points) {
         this.points = points;
     }
 

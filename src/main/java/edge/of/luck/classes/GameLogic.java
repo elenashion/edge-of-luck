@@ -7,7 +7,6 @@ import edge.of.luck.entities.enums.GameChoice;
 import edge.of.luck.entities.enums.GameResult;
 import edge.of.luck.entities.User;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -15,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-//@Component
 @Slf4j
 public class GameLogic {
 
@@ -25,8 +23,7 @@ public class GameLogic {
     private int secondNumber;
     private GameChoice roundResult;
 
-    @Value("${maxEnemiesSize:3}")
-    private int MAX_ENEMIES_SIZE;
+    private static final int MAX_ENEMIES_SIZE = 3;
     private User activeUser;
     private final List<ComputerPlayer> activeEnemies = new ArrayList<>();
 

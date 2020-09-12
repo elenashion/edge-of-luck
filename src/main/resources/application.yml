@@ -1,7 +1,4 @@
-maxEnemiesSize: 3
-
 points:
-  some: aaa
   user:
     userWinEnemyLose: 18
     userWinEnemyWin: 14

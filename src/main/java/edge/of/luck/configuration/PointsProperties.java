@@ -7,7 +7,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Data
 @ConfigurationProperties("points")
 public class PointsProperties {
-    private String some;
     private GameResultPoints user;
     private GameResultPoints enemy;
 

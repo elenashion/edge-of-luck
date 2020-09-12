@@ -2,13 +2,11 @@ package edge.of.luck.classes;
 
 import edge.of.luck.entities.User;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
-//@Component
 @Slf4j
 public class UsersHelper {
     private final Map<String, User> usersByName = new HashMap<>();

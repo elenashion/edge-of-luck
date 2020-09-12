@@ -2,13 +2,11 @@ package edge.of.luck.controllers;
 
 import edge.of.luck.classes.GameLogic;
 import edge.of.luck.classes.UsersHelper;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,7 +32,7 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public void login(ActionEvent actionEvent) {
+    public void login() {
         try {
             if (loginText.getText().length() < 3)
                 return;
