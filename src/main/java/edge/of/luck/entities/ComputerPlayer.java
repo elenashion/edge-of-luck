@@ -3,30 +3,20 @@ package edge.of.luck.entities;
 import edge.of.luck.classes.GameLogic;
 import edge.of.luck.entities.enums.GameChoice;
 import edge.of.luck.entities.enums.GameResult;
+import lombok.Getter;
+import lombok.NonNull;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ComputerPlayer {
-    private String name;
+    @Getter
+    private final String name;
+    @Getter
     private int points;
-    private int number;
-    private Map<Integer, GameChoice> decisions;
-    private Map<Integer, GameResult> results;
-
-    public int getPoints() {
-        return points;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getNumber() {
-        return number;
-    }
+    @Getter
+    private final int number;
+    private final Map<Integer, GameChoice> decisions = new HashMap<>();
+    private final Map<Integer, GameResult> results = new HashMap<>();
 
     public GameResult getResultByRound(int round) {
         return results.get(round);
@@ -36,29 +26,31 @@ public class ComputerPlayer {
         return decisions.get(round);
     }
 
+    List<String> names = Arrays.asList("Madoka", "Kurisu", "Mayushi", "Horo", "Haruhi", "Konata", "Aqua", "Yoko", "Rei", "Miku");
+
     public void setPoints(int point) {
         points += point;
         if (points < 0)
             points = 0;
     }
 
-    public void putResult(int round, GameResult result) {
+    public void putResult(int round, @NonNull GameResult result) {
         results.put(round, result);
     }
 
-    public ComputerPlayer(GameLogic gameLogic, int number) {
+    public ComputerPlayer(int number, @NonNull Set<String> existingEnemyNames) {
         this.number = number;
-        this.name = setName(gameLogic);
+        this.name = setName(existingEnemyNames);
         this.points = 100;
-        decisions = new HashMap<>();
-        results = new HashMap<>();
     }
 
-    private String setName(GameLogic gameLogic) {
-        List<String> names = Arrays.asList("Мадока", "Курису", "Маюши", "Хоро", "Харухи", "Коната", "Аква", "Йоко", "Рей", "Мику");
-        int number = gameLogic.getRandom() / 10;
-        return number == 0 ? names.get(0) : number == 1 ? names.get(1) : number == 2 ? names.get(2) : number == 3 ? names.get(3) : number == 4 ? names.get(4) : number == 5 ? names.get(5) :
-                number == 6 ? names.get(6) : number == 7 ? names.get(7) : number == 8 ? names.get(8) : number == 9 ? names.get(9) : names.get(0);
+    private String setName(Set<String> existingEnemyNames) {
+        String newName;
+        do {
+            int number = GameLogic.getRandom() / 10;
+            newName = names.get(number);
+        } while (existingEnemyNames.contains(newName));
+        return newName;
     }
 
     public GameChoice makeADecision(int round) {
@@ -68,8 +60,6 @@ public class ComputerPlayer {
                     return makeSpecialDecision(round) == GameChoice.EVEN ? GameChoice.ODD : GameChoice.EVEN;
                 else
                     return makeSpecialDecision(round);
-            case 1:
-                return makeADecisionWithoutList(round);
             case 2:
                 if (round % 10 == 0)
                     return makeSpecialDecision(round);

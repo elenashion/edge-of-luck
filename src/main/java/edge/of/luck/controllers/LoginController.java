@@ -1,33 +1,43 @@
 package edge.of.luck.controllers;
 
-import edge.of.luck.EdgeOfLuckMain;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
+import edge.of.luck.classes.GameLogic;
+import edge.of.luck.classes.UsersHelper;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import edge.of.luck.classes.LogicManager;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 
+@RestController
+//@RequestMapping("/login")
 public class LoginController {
     public TextField loginText;
-    private LogicManager logicManager;
+    private final GameLogic gameLogic;
+    private final UsersHelper usersHelper;
 
-    @FXML
-    private void initialize() {
-        this.logicManager = EdgeOfLuckMain.logicManager;
+    LoginController(GameLogic gameLogic, UsersHelper usersHelper) {
+        this.gameLogic = gameLogic;
+        this.usersHelper = usersHelper;
     }
 
+    @PostMapping("/register")
+    public void register() {
+        gameLogic.setActiveUser(usersHelper.getOrCreateUserByName(loginText.getText()));
 
-    public void login(ActionEvent actionEvent) {
+    }
+
+    @PostMapping("/login")
+    public void login() {
         try {
             if (loginText.getText().length() < 3)
                 return;
 
-            logicManager.gameLogic.setActiveUser(logicManager.getUserByName(loginText.getText()));
+            gameLogic.setActiveUser(usersHelper.getOrCreateUserByName(loginText.getText()));
 
             Stage stage = (Stage) loginText.getScene().getWindow();
             GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge/of/luck/fxml/MenuWindow.fxml"));
@@ -40,4 +50,5 @@ public class LoginController {
             e.printStackTrace();
         }
     }
+
 }

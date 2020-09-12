@@ -2,21 +2,17 @@ package edge.of.luck.controllers;
 
 import edge.of.luck.entities.enums.GameChoice;
 import javafx.concurrent.Task;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import edge.of.luck.classes.GameLogic;
-import edge.of.luck.EdgeOfLuckMain;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
-
+@RestController
+@RequestMapping("/game")
 public class GameController {
-    private GameLogic gameLogic;
+    private final GameLogic gameLogic;
     public Text firstEnemyName;
     public Text playerName;
     public Text firstEnemyPoints;
@@ -34,11 +30,12 @@ public class GameController {
     public Text thirdEnemyName;
     public Text thirdEnemyPoints;
 
-    @FXML
-    private void initialize() {
-        this.gameLogic = EdgeOfLuckMain.gameLogic;
-        gameLogic.resetRound();
+    GameController(GameLogic gameLogic) {
+        this.gameLogic = gameLogic;
+    }
 
+    private void init() {
+        gameLogic.resetRound();
         gameLogic.setNumbers();
         setStartVars();
     }
@@ -63,15 +60,22 @@ public class GameController {
 
     }
 
-    public void chooseOdd(ActionEvent actionEvent) {
+    public void chooseOdd() {
         blockButtons();
         String text = gameLogic.getResultStringFromUserDecision(GameChoice.ODD);
         afterChoose(text);
     }
 
+    @PostMapping("/logout")
+    public void choose(GameChoice choice) {
+        blockButtons();
+        String text = gameLogic.getResultStringFromUserDecision(choice);
+        afterChoose(text);
+    }
+
     private void finishedSleeping() {}
 
-    public void chooseEven(ActionEvent actionEvent) {
+    public void chooseEven() {
         blockButtons();
         String text = gameLogic.getResultStringFromUserDecision(GameChoice.EVEN);
         afterChoose(text);
@@ -115,8 +119,9 @@ public class GameController {
         new Thread(timer).start();
     }
 
-    public void returnToMenu(ActionEvent actionEvent) {
-        try {
+    @PostMapping("/returnToMenu")
+    public void returnToMenu() {
+/*        try {
             Stage stage = (Stage) ((Button) actionEvent.getTarget()).getScene().getWindow();
             GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge/of/luck/fxml/MenuWindow.fxml"));
 
@@ -125,6 +130,6 @@ public class GameController {
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }

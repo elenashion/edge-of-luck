@@ -1,36 +1,34 @@
 package edge.of.luck.controllers;
 
-import edge.of.luck.EdgeOfLuckMain;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import edge.of.luck.classes.GameLogic;
-import edge.of.luck.classes.LogicManager;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
+@RestController
+@RequestMapping("/menu")
+@Slf4j
 public class MenuController {
     public Button logoutButton;
     public Button startGameButton1;
     public Button startGameButton2;
     public Button startGameButton3;
-    private LogicManager logicManager;
-    private GameLogic gameLogic;
+    private final GameLogic gameLogic;
 
-
-    @FXML
-    private void initialize() {
-        this.logicManager = EdgeOfLuckMain.logicManager;
-        this.gameLogic = EdgeOfLuckMain.gameLogic;
+    MenuController(GameLogic gameLogic) {
+        this.gameLogic = gameLogic;
     }
 
-    public void logout(ActionEvent actionEvent) {
+    @PostMapping("/logout")
+    public void logout() {
         try {
-            logicManager.log.info(String.format("User %s is logout", gameLogic.getActiveUser().getName()));
+            log.info(String.format("User %s is logout", gameLogic.getActiveUser().getName()));
             Stage stage = (Stage) logoutButton.getScene().getWindow();
             GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge/of/luck/fxml/LoginWindow.fxml"));
             Scene scene = new Scene(rootLayout);
@@ -42,18 +40,21 @@ public class MenuController {
         }
     }
 
-    public void exit(ActionEvent actionEvent) {
-        logicManager.log.info("Exit from program");
+    public void exit() {
+        log.info("Exit from program");
         System.exit(0);
     }
 
-    public void getRecords(ActionEvent actionEvent) {
+    @PostMapping("/getRecords")
+    public void getRecords() {
     }
 
-    public void getRules(ActionEvent actionEvent) {
+    @GetMapping("/getRules")
+    public void getRules() {
     }
 
-    public void chooseEnemies(ActionEvent actionEvent) {
+    @PostMapping("/chooseEnemies")
+    public void chooseEnemies() {
         try {
             Stage stage = (Stage) logoutButton.getScene().getWindow();
             GridPane rootLayout = FXMLLoader.load(getClass().getResource("/main/edge.of.luck.fxml/ChooseEnemiesWindow.edge.of.luck.fxml"));
@@ -67,8 +68,9 @@ public class MenuController {
     }
 
 
-    public void startGame(ActionEvent actionEvent) {
-        try {
+    @PostMapping("/startGame")
+    public void startGame() {
+/*        try {
             int enemiesNumber = Integer.parseInt(((Button) actionEvent.getTarget()).getText());
             gameLogic.createEnemies(enemiesNumber);
 
@@ -80,6 +82,6 @@ public class MenuController {
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }

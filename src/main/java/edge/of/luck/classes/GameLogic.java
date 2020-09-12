@@ -1,51 +1,46 @@
 package edge.of.luck.classes;
 
+import edge.of.luck.configuration.PointsProperties;
 import edge.of.luck.entities.ComputerPlayer;
+import edge.of.luck.entities.GameResultPoints;
 import edge.of.luck.entities.enums.GameChoice;
 import edge.of.luck.entities.enums.GameResult;
 import edge.of.luck.entities.User;
-import org.apache.logging.log4j.core.Logger;
-import org.apache.logging.log4j.core.LoggerContext;
+import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-
+@Slf4j
 public class GameLogic {
-    private final Logger log = LoggerContext.getContext().getLogger("GameLogic");
+
     private int round = 0;
 
+    @Getter
     private int firstNumber;
+    @Getter
     private int secondNumber;
     private GameChoice roundResult;
 
-    private final int MAX_ENEMIES_SIZE;
+    private static final int MAX_ENEMIES_SIZE = 3;
     private User activeUser;
-    private List<ComputerPlayer> activeEnemies = new ArrayList<>();
+    private final List<ComputerPlayer> activeEnemies = new ArrayList<>();
 
-    private final int userWinEnemyLoseUserPoints;
-    private final int userWinEnemyWinUserPoints;
-    private final int userLoseEnemyWinUserPoints;
-    private final int userLoseEnemyLoseUserPoints;
-    private final int userWinEnemyLoseEnemyPoints;
-    private final int userWinEnemyWinEnemyPoints;
-    private final int userLoseEnemyWinEnemyPoints;
-    private final int userLoseEnemyLoseEnemyPoints;
+    private final GameResultPoints userPoints;
+    private final GameResultPoints enemyPoints;
 
 
-    public GameLogic(LogicManager logicManager) {
-        MAX_ENEMIES_SIZE = Integer.valueOf(logicManager.properties.getProperty("main.maxEnemiesSize"));
-        userWinEnemyLoseUserPoints = Integer.valueOf(logicManager.properties.getProperty("main.user.points.userWinEnemyLose"));
-        userWinEnemyWinUserPoints = Integer.valueOf(logicManager.properties.getProperty("main.user.points.userWinEnemyWin"));
-        userLoseEnemyWinUserPoints = Integer.valueOf(logicManager.properties.getProperty("main.user.points.userLoseEnemyWin"));
-        userLoseEnemyLoseUserPoints = Integer.valueOf(logicManager.properties.getProperty("main.user.points.userLoseEnemyLose"));
-        userWinEnemyLoseEnemyPoints = Integer.valueOf(logicManager.properties.getProperty("main.enemy.points.userWinEnemyLose"));
-        userWinEnemyWinEnemyPoints = Integer.valueOf(logicManager.properties.getProperty("main.enemy.points.userWinEnemyWin"));
-        userLoseEnemyWinEnemyPoints = Integer.valueOf(logicManager.properties.getProperty("main.enemy.points.userLoseEnemyWin"));
-        userLoseEnemyLoseEnemyPoints = Integer.valueOf(logicManager.properties.getProperty("main.enemy.points.userLoseEnemyLose"));
+    public GameLogic(PointsProperties points) {
+        this.userPoints = points.getUser();
+        this.enemyPoints = points.getEnemy();
+    }
 
+    public static int getRandom() {
+        return Integer.parseInt(new BigDecimal(Math.random() * 100).abs().divide(BigDecimal.ONE, 0, RoundingMode.DOWN).toString());
     }
 
     public void createEnemies(int number) {
@@ -55,31 +50,10 @@ public class GameLogic {
         }
         activeEnemies.clear();
         for (int i = 0; i < number; i++) {
-            activeEnemies.add(i, new ComputerPlayer(this, i));
-        }
-        for (int i = 0; i < number; i++) {
-            ComputerPlayer enemy = activeEnemies.get(i);
-            for (int j = 0; j < number; j++) {
-                if (i == j)
-                    continue;
-                if (enemy.getName().equals(activeEnemies.get(j).getName())){
-                    activeEnemies.remove(j);
-                    activeEnemies.add(j, new ComputerPlayer(this, j));
-                    i = 0;
-                    j = 0;
-                }
-            }
+            activeEnemies.add(i, new ComputerPlayer(i, activeEnemies.stream().map(ComputerPlayer::getName).collect(Collectors.toSet())));
         }
         log.info("Enemies created. Number of enemies={}", number);
     }
-
-    public int getRandom() {
-        return Integer.parseInt(new BigDecimal(Math.random() * 100).abs().divide(BigDecimal.ONE, 0, RoundingMode.DOWN).toString());
-    }
-
-    public int getFirstNumber() { return firstNumber; }
-
-    public int getSecondNumber() { return secondNumber; }
 
     public void setNumbers () {
         round++;
@@ -115,22 +89,22 @@ public class GameLogic {
         for (ComputerPlayer cp : activeEnemies) {
             int points;
             if (player && cp.getResultByRound(round) == GameResult.WIN) {
-                points = userWinEnemyWinEnemyPoints;
+                points = enemyPoints.getUserWinEnemyWin();
                 enemies++;
             } else if (player && cp.getResultByRound(round) == GameResult.LOSE) {
-                points = userWinEnemyLoseEnemyPoints;
+                points = enemyPoints.getUserWinEnemyLose();
             } else if (!player && cp.getResultByRound(round) == GameResult.WIN) {
-                points = userLoseEnemyWinEnemyPoints;
+                points = enemyPoints.getUserLoseEnemyWin();
                 enemies++;
             } else {
-                points = userLoseEnemyLoseEnemyPoints;
+                points = enemyPoints.getUserLoseEnemyLose();
             }
             cp.setPoints(points);
             log.info("setPoints. {} choose {}, result={}, set {} points. Round={}, activeUser={}",
                     cp.getName(), cp.getChoiceByRound(round), cp.getResultByRound(round), points, round, activeUser.getName());
         }
 
-        int points = (player && enemies == 0) ? userWinEnemyLoseUserPoints : player ? userWinEnemyWinUserPoints : enemies == 0 ? userLoseEnemyLoseUserPoints : userLoseEnemyWinUserPoints;
+        int points = (player && enemies == 0) ? userPoints.getUserWinEnemyLose() : player ? userPoints.getUserWinEnemyWin() : enemies == 0 ? userPoints.getUserLoseEnemyLose() : userPoints.getUserLoseEnemyWin();
         activeUser.setPoints(points);
         log.info("setPoints. User {} choose {}, result={}, set {} points, round={}", activeUser.getName(), activeUser.getChoiceByRound(round), playerResult, points, round);
     }

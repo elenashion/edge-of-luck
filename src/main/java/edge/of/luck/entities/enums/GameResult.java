@@ -1,8 +1,9 @@
 package edge.of.luck.entities.enums;
 
 public enum GameResult {
-    WIN("Вы угадали"),
-    LOSE("Вы не угадали");
+    // TODO: remove string, add locale versions by result
+    WIN("You won"),
+    LOSE("You lose");
 
     String result;
 

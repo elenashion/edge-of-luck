@@ -1,24 +1,21 @@
 package edge.of.luck.classes;
 
 import edge.of.luck.entities.User;
-import org.apache.logging.log4j.core.Logger;
-import org.apache.logging.log4j.core.LoggerContext;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
+@Slf4j
 public class UsersHelper {
-    private final LogicManager logicManager;
-    private Map<String, User> usersByName = new HashMap<>();
-    private final Logger log = LoggerContext.getContext().getLogger("UsersHelper");
+    private final Map<String, User> usersByName = new HashMap<>();
 //    private final FileOutputStream outputStream;
 
     private final String pathToSaveFile = "settings.xml";
 
 
-    public UsersHelper(LogicManager logicManager) {
-        this.logicManager = logicManager;
+    public UsersHelper() {
 //        outputStream = createFileForResults();
 //        getAllUsers();
 
@@ -42,7 +39,7 @@ public class UsersHelper {
         return user;
     }
 
-    public User getOrCreateUser(String name) {
+    public User getOrCreateUserByName(String name) {
         User user = usersByName.get(name);
         return user != null ? user : createNewUser(name);
     }
