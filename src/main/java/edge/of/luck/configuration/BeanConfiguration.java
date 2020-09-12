@@ -2,19 +2,23 @@ package edge.of.luck.configuration;
 
 import edge.of.luck.classes.GameLogic;
 import edge.of.luck.classes.UsersHelper;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.core.env.Environment;
 
 @Configuration
-@ComponentScan(basePackageClasses = BeanConfiguration.class)
+@EnableConfigurationProperties(PointsProperties.class)
 public class BeanConfiguration {
-    BeanConfiguration() {
+    private Environment env;
+    private PointsProperties points;
+
+    BeanConfiguration(Environment env, PointsProperties points) {
+        this.env = env;
+        this.points = points;
     }
 
     @Bean
@@ -26,7 +30,7 @@ public class BeanConfiguration {
     @Bean
     @Primary
     public GameLogic gameLogic() {
-        return new GameLogic();
+        return new GameLogic(points);
     }
 
     @Bean

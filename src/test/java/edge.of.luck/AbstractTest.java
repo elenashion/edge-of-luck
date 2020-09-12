@@ -2,7 +2,7 @@ package edge.of.luck;
 
 import edge.of.luck.classes.UsersHelper;
 import edge.of.luck.classes.GameLogic;
-import org.springframework.beans.factory.annotation.Autowired;
+import edge.of.luck.configuration.PointsProperties;
 
 public class AbstractTest {
     protected UsersHelper usersHelper;
@@ -10,6 +10,6 @@ public class AbstractTest {
 
     public AbstractTest() {
         usersHelper = new UsersHelper();
-        gameLogic = new GameLogic();
+        gameLogic = new GameLogic(new PointsProperties());
     }
 }

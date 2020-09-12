@@ -1,6 +1,5 @@
 package edge.of.luck;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
@@ -17,7 +16,7 @@ public class EdgeOfLuckMain extends SpringBootServletInitializer {
     private GridPane rootLayout;
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(EdgeOfLuckMain.class, args);
 //        launch(args);
     }
 
@@ -29,7 +28,7 @@ public class EdgeOfLuckMain extends SpringBootServletInitializer {
 
         initRootLayout();
     }*/
-    
+
 
 
     private void initRootLayout() {

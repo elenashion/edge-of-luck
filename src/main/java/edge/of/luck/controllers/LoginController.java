@@ -8,8 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import org.apache.logging.log4j.core.Logger;
-import org.apache.logging.log4j.core.LoggerContext;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,12 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("/login")
+//@RequestMapping("/login")
 public class LoginController {
     public TextField loginText;
     private final GameLogic gameLogic;
     private final UsersHelper usersHelper;
-    private final Logger log = LoggerContext.getContext().getLogger("LoginController");
 
     LoginController(GameLogic gameLogic, UsersHelper usersHelper) {
         this.gameLogic = gameLogic;
@@ -31,6 +29,7 @@ public class LoginController {
 
     @PostMapping("/register")
     public void register() {
+        gameLogic.setActiveUser(usersHelper.getOrCreateUserByName(loginText.getText()));
 
     }
 

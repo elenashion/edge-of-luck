@@ -6,15 +6,16 @@ repositories {
 
 dependencies {
 
-    implementation('org.apache.logging.log4j:log4j-core:2.13.3')
-//    implementation('org.apache.logging.log4j:log4j-slf4j-impl:2.13.3')
     implementation('org.openjfx:javafx-fxml:15-ea+7:win')
     implementation('org.openjfx:javafx-controls:15-ea+7:win')
     implementation('org.openjfx:javafx-base:15-ea+7:win')
     implementation('org.openjfx:javafx-graphics:15-ea+7:win')
     implementation("org.springframework.boot:spring-boot-starter-parent:2.3.3.RELEASE")
     implementation("org.springframework.boot:spring-boot-starter-web:2.3.3.RELEASE")
+    implementation("org.projectlombok:lombok:1.18.12")
 
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:2.3.3.RELEASE"
+    annotationProcessor "org.projectlombok:lombok:1.18.12"
 
     testImplementation('junit:junit:4.+')
 

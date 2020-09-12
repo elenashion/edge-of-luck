@@ -7,21 +7,20 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import edge.of.luck.classes.GameLogic;
-import org.apache.logging.log4j.core.Logger;
-import org.apache.logging.log4j.core.LoggerContext;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
 @RestController
 @RequestMapping("/menu")
+@Slf4j
 public class MenuController {
     public Button logoutButton;
     public Button startGameButton1;
     public Button startGameButton2;
     public Button startGameButton3;
     private final GameLogic gameLogic;
-    private final Logger log = LoggerContext.getContext().getLogger("MenuController");
 
     MenuController(GameLogic gameLogic) {
         this.gameLogic = gameLogic;

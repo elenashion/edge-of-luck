@@ -3,27 +3,20 @@ package edge.of.luck.entities;
 import edge.of.luck.classes.GameLogic;
 import edge.of.luck.entities.enums.GameChoice;
 import edge.of.luck.entities.enums.GameResult;
+import lombok.Getter;
+import lombok.NonNull;
 
 import java.util.*;
 
 public class ComputerPlayer {
+    @Getter
     private final String name;
+    @Getter
     private int points;
+    @Getter
     private final int number;
-    private final Map<Integer, GameChoice> decisions;
-    private final Map<Integer, GameResult> results;
-
-    public int getPoints() {
-        return points;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getNumber() {
-        return number;
-    }
+    private final Map<Integer, GameChoice> decisions = new HashMap<>();
+    private final Map<Integer, GameResult> results = new HashMap<>();
 
     public GameResult getResultByRound(int round) {
         return results.get(round);
@@ -41,16 +34,14 @@ public class ComputerPlayer {
             points = 0;
     }
 
-    public void putResult(int round, GameResult result) {
+    public void putResult(int round, @NonNull GameResult result) {
         results.put(round, result);
     }
 
-    public ComputerPlayer(int number, Set<String> existingEnemyNames) {
+    public ComputerPlayer(int number, @NonNull Set<String> existingEnemyNames) {
         this.number = number;
         this.name = setName(existingEnemyNames);
         this.points = 100;
-        decisions = new HashMap<>();
-        results = new HashMap<>();
     }
 
     private String setName(Set<String> existingEnemyNames) {

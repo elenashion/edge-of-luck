@@ -1,8 +1,7 @@
 package edge.of.luck.classes;
 
 import edge.of.luck.entities.User;
-import org.apache.logging.log4j.core.Logger;
-import org.apache.logging.log4j.core.LoggerContext;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
@@ -10,9 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 //@Component
+@Slf4j
 public class UsersHelper {
-    private Map<String, User> usersByName = new HashMap<>();
-    private final Logger log = LoggerContext.getContext().getLogger("UsersHelper");
+    private final Map<String, User> usersByName = new HashMap<>();
 //    private final FileOutputStream outputStream;
 
     private final String pathToSaveFile = "settings.xml";

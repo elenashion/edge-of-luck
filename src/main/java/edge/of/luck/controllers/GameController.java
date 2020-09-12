@@ -10,8 +10,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import edge.of.luck.classes.GameLogic;
-import org.apache.logging.log4j.core.Logger;
-import org.apache.logging.log4j.core.LoggerContext;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,7 +20,6 @@ import java.io.IOException;
 @RequestMapping("/game")
 public class GameController {
     private final GameLogic gameLogic;
-    private final Logger log = LoggerContext.getContext().getLogger("GameController");
     public Text firstEnemyName;
     public Text playerName;
     public Text firstEnemyPoints;
@@ -42,7 +39,7 @@ public class GameController {
 
     GameController(GameLogic gameLogic) {
         this.gameLogic = gameLogic;
-        init();
+//        init();
     }
 
     private void init() {
